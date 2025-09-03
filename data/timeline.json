@@ -1,0 +1,22 @@
+[
+    {
+        "decade": "1970",
+        "title": "O SURGIMENTO",
+        "summary": "O punk rock emerge como um movimento de rebeldia e DIY...",
+        "bands": ["Sex Pistols", "The Ramones", "The Clash", "Iggy Pop"],
+        "links": [
+            {"text": "Documentário BBC", "url": "https://exemplo.com/doc1"},
+            {"text": "Artigo Rolling Stone", "url": "https://exemplo.com/artigo1"}
+        ]
+    },
+    {
+        "decade": "1980",
+        "title": "A EXPLOSÃO",
+        "summary": "O hardcore punk ganha força com bandas rápidas e agressivas...",
+        "bands": ["Dead Kennedys", "Bad Religion", "Black Flag", "Minor Threat"],
+        "links": [
+            {"text": "Cena Hardcore NY", "url": "https://exemplo.com/hardcore"},
+            {"text": "Documentário 80s", "url": "https://exemplo.com/doc80s"}
+        ]
+    }
+]
