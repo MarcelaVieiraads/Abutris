@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="stylesheet" href="assets/css/modal.css">
 </head>
+
 <body>
     <header class="hero">
         <h1 class="hero__title">ABUTRIS</h1>
-        
+
         <p class="hero__description">
             INFORMAÇÕES SOBRE O SITE, BREVE DESCRIÇÃO E<br>
             BLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁ...
@@ -21,13 +23,17 @@
         <div class="hero__scroll-indicator">↓</div>
     </header>
 
-    <main class="timeline" id="timeline">
-        <!-- Os botões das décadas serão inseridos aqui pelo JavaScript -->
-    </main>
+    <div class="timeline-container">
+        <main class="timeline" id="timeline">
+            <!-- Os botões das décadas serão inseridos aqui pelo JavaScript -->
+        </main>
+    </div>
 
-    <div class="scroll-guide">
-        <div class="scroll-guide__bar"></div>
-        <p class="scroll-guide__text">ESSA BARRA REPRESENTA A BARRA DE SCROLL DA TIMELINE ONDE VAI DE UM LADO PARA O OUTRO</p>
+    <div class="timeline-scroll-container">
+        <div class="timeline-scroll-bar">
+            <div class="timeline-scroll-thumb"></div>
+        </div>
+        <p class="timeline-scroll-text">Use a barra abaixo ou arraste a timeline para os lados</p>
     </div>
 
     <div class="modal" id="modal">
@@ -42,4 +48,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -81,3 +81,112 @@
         font-size: 1.3rem;
     }
 }
+
+/* CONTAINER DA TIMELINE COM SCROLL HORIZONTAL */
+.timeline-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2rem 0;
+    background: var(--cinza-asfalto);
+    scrollbar-width: none; /* Esconde scrollbar padrão Firefox */
+    -ms-overflow-style: none; /* Esconde scrollbar padrão IE */
+    cursor: grab;
+    border-top: 3px solid var(--vermelho-sangue);
+    border-bottom: 3px solid var(--vermelho-sangue);
+}
+
+.timeline-container::-webkit-scrollbar {
+    display: none; /* Esconde scrollbar padrão Chrome */
+}
+
+.timeline-container:active {
+    cursor: grabbing;
+}
+
+.timeline {
+    display: flex;
+    gap: 4rem;
+    padding: 0 4rem;
+    min-width: max-content;
+    position: relative;
+    min-height: 200px;
+    align-items: center;
+}
+
+/* BARRA DE SCROLL PERSONALIZADA */
+.timeline-scroll-container {
+    padding: 1.5rem 2rem;
+    background: var(--preto-absoluto);
+    border-top: 2px solid var(--vermelho-sangue);
+}
+
+.timeline-scroll-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--cinza-asfalto);
+    border-radius: 6px;
+    position: relative;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.timeline-scroll-thumb {
+    width: 40%;
+    height: 100%;
+    background: var(--amarelo-alerta);
+    border-radius: 6px;
+    position: absolute;
+    left: 0;
+    transition: left 0.2s ease;
+    box-shadow: 0 0 5px var(--amarelo-alerta);
+}
+
+.timeline-scroll-thumb:hover {
+    background: var(--vermelho-sangue);
+}
+
+.timeline-scroll-text {
+    font-family: var(--fonte-titulo);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--branco-puro);
+    text-align: center;
+}
+
+/* BOTÕES DAS DÉCADAS - Ajustados para scroll horizontal */
+.decade-btn {
+    background: var(--amarelo-alerta);
+    color: var(--preto-absoluto);
+    border: 3px solid var(--preto-absoluto);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.decade-btn:hover {
+    transform: scale(1.15);
+    background: var(--vermelho-sangue);
+    color: var(--branco-puro);
+}
+
+/* Linha da timeline ajustada para scroll */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: var(--branco-puro);
+    transform: translateY(-50%);
+    z-index: 1;
+}

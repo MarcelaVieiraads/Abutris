@@ -93,4 +93,73 @@
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Reativa scroll da página principal
         }
+
+                // === SCROLL HORIZONTAL DA TIMELINE ===
+        const timelineScrollContainer = document.querySelector('.timeline-container');
+        const timeline = document.getElementById('timeline');
+        const scrollThumb = document.querySelector('.timeline-scroll-thumb');
+        const scrollBar = document.querySelector('.timeline-scroll-bar');
+
+        // Atualiza a posição do thumb da scrollbar
+        function updateScrollThumb() {
+            if (!timelineScrollContainer || !timeline || !scrollThumb) return;
+            
+            const scrollableWidth = timeline.scrollWidth - timelineScrollContainer.clientWidth;
+            if (scrollableWidth <= 0) return;
+            
+            const scrollPosition = timelineScrollContainer.scrollLeft;
+            const thumbPosition = (scrollPosition / scrollableWidth) * 100;
+            
+            scrollThumb.style.left = `${thumbPosition}%`;
+            const thumbWidth = Math.max(20, (timelineScrollContainer.clientWidth / timeline.scrollWidth) * 100);
+            scrollThumb.style.width = `${thumbWidth}%`;
+        }
+
+        // Scroll quando clica na barra
+        if (scrollBar) {
+            scrollBar.addEventListener('click', (e) => {
+                const scrollableWidth = timeline.scrollWidth - timelineScrollContainer.clientWidth;
+                if (scrollableWidth <= 0) return;
+                
+                const clickPosition = (e.clientX - scrollBar.getBoundingClientRect().left) / scrollBar.clientWidth;
+                timelineScrollContainer.scrollLeft = clickPosition * scrollableWidth;
+            });
+        }
+
+        // Atualiza scrollbar quando a timeline é scrollada
+        if (timelineScrollContainer) {
+            timelineScrollContainer.addEventListener('scroll', updateScrollThumb);
+        }
+
+        // Scroll suave ao arrastar o thumb
+        let isDragging = false;
+
+        if (scrollThumb) {
+            scrollThumb.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging || !scrollBar || !timelineScrollContainer) return;
+            
+            const scrollableWidth = timeline.scrollWidth - timelineScrollContainer.clientWidth;
+            if (scrollableWidth <= 0) return;
+            
+            const dragPosition = (e.clientX - scrollBar.getBoundingClientRect().left) / scrollBar.clientWidth;
+            timelineScrollContainer.scrollLeft = Math.max(0, Math.min(scrollableWidth, dragPosition * scrollableWidth));
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Atualiza scrollbar quando a janela é redimensionada
+        window.addEventListener('resize', updateScrollThumb);
+
+        // Atualiza scrollbar inicialmente
+        setTimeout(updateScrollThumb, 100);
+
+        
     });

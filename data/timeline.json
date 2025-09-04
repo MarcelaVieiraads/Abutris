@@ -2,31 +2,55 @@
     {
         "decade": "1970",
         "title": "O SURGIMENTO",
-        "summary": "O punk rock emerge como um movimento de rebeldia contra o establishment musical. Bandas como Sex Pistols e Ramones criam um som cru e direto que viria a definir toda uma geração.",
+        "summary": "O punk rock emerge como um movimento de rebeldia contra o establishment musical...",
         "bands": ["Sex Pistols", "The Ramones", "The Clash", "Iggy Pop & The Stooges"],
         "links": [
-            {"text": "Documentário - História do Punk", "url": "https://exemplo.com/doc-punk"},
-            {"text": "Artigo - Anos 70", "url": "https://exemplo.com/anos70"}
+            {"text": "Documentário - Anos 70", "url": "https://exemplo.com/70s"}
         ]
     },
     {
         "decade": "1980",
-        "title": "A EXPLOSÃO",
-        "summary": "O hardcore punk ganha força com bandas cada vez mais rápidas e agressivas. A cena underground se fortalece com selos independentes e uma ética DIY forte.",
+        "title": "A EXPLOSÃO", 
+        "summary": "O hardcore punk ganha força com bandas cada vez mais rápidas e agressivas...",
         "bands": ["Dead Kennedys", "Bad Religion", "Black Flag", "Minor Threat"],
         "links": [
-            {"text": "Cena Hardcore Americana", "url": "https://exemplo.com/hardcore-usa"},
-            {"text": "Documentário - Anos 80", "url": "https://exemplo.com/anos80"}
+            {"text": "Cena Hardcore", "url": "https://exemplo.com/hardcore"}
         ]
     },
     {
         "decade": "1990",
         "title": "A EVOLUÇÃO",
-        "summary": "O punk alcança o mainstream enquanto mantém suas raízes underground. Bandas como Green Day e The Offspring levam o som para as rádios, mas a cena independente continua forte.",
+        "summary": "O punk alcança o mainstream enquanto mantém suas raízes underground...",
         "bands": ["Green Day", "The Offspring", "Rancid", "NOFX"],
         "links": [
-            {"text": "Green Day - Dookie", "url": "https://exemplo.com/greenday"},
-            {"text": "The Offspring - Smash", "url": "https://exemplo.com/offspring"}
+            {"text": "Era do Pop Punk", "url": "https://exemplo.com/90s"}
+        ]
+    },
+    {
+        "decade": "2000", 
+        "title": "A FUSÃO",
+        "summary": "Novas vertentes se misturam com o punk tradicional...",
+        "bands": ["My Chemical Romance", "Fall Out Boy", "Paramore", "Against Me!"],
+        "links": [
+            {"text": "Emo e Punk", "url": "https://exemplo.com/2000s"}
+        ]
+    },
+    {
+        "decade": "2010",
+        "title": "A RENOVAÇÃO",
+        "summary": "Bandas independentes revitalizam o gênero com novas influências...",
+        "bands": ["FIDLAR", "The Menzingers", "PUP", "Jeff Rosenstock"],
+        "links": [
+            {"text": "Punk Moderno", "url": "https://exemplo.com/2010s"}
+        ]
+    },
+    {
+        "decade": "Atual",
+        "title": "O PRESENTE",
+        "summary": "A cena punk continua vibrante e diversificada...",
+        "bands": ["Turnstile", "Idles", "Amyl and The Sniffers", "The Chats"],
+        "links": [
+            {"text": "Punk Contemporâneo", "url": "https://exemplo.com/atual"}
         ]
     }
 ]
