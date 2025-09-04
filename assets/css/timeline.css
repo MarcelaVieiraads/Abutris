@@ -1,120 +1,112 @@
-/* TIMELINE */
-.timeline {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    padding: 3rem 2rem;
-    background: var(--cinza-asfalto);
-    position: relative;
-    min-height: 200px;
-    align-items: center;
-    border-top: 3px solid var(--vermelho-sangue);
-    border-bottom: 3px solid var(--vermelho-sangue);
-}
-
-/* Linha horizontal da timeline */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 2px;
-    background: var(--branco-puro);
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-/* Botões das décadas como BOLINHAS */
-.decade-btn {
-    background: var(--amarelo-alerta);
-    color: var(--preto-absoluto);
-    border: 3px solid var(--preto-absoluto);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    font-family: var(--fonte-titulo);
-    font-size: 1.3rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-    position: relative;
-}
-
-.decade-btn:hover {
-    transform: scale(1.2);
-    background: var(--vermelho-sangue);
-    color: var(--branco-puro);
-}
-
-/* Ícone nos botões (opcional) */
-.decade-btn::after {
-    content: '⚡';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-}
-
-/* RESPONSIVIDADE DA TIMELINE */
-@media (max-width: 768px) {
-    .timeline {
-        gap: 2rem;
-        flex-wrap: wrap;
-        padding: 2rem 1rem;
-    }
-    
-    .timeline::before {
-        display: none;
-    }
-    
-    .decade-btn {
-        width: 60px;
-        height: 60px;
-        font-size: 1.1rem;
-    }
-    
-    .decade-btn::after {
-        top: -25px;
-        font-size: 1.3rem;
-    }
-}
-
-/* CONTAINER DA TIMELINE COM SCROLL HORIZONTAL */
+/* CONTAINER DA TIMELINE */
 .timeline-container {
     width: 100%;
+    height: 50vh; /* Metade dos 3/4 */
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 2rem 0;
-    background: var(--cinza-asfalto);
-    scrollbar-width: none; /* Esconde scrollbar padrão Firefox */
-    -ms-overflow-style: none; /* Esconde scrollbar padrão IE */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     cursor: grab;
-    border-top: 3px solid var(--vermelho-sangue);
-    border-bottom: 3px solid var(--vermelho-sangue);
+    position: relative;
+    margin: 0 auto;
 }
 
 .timeline-container::-webkit-scrollbar {
-    display: none; /* Esconde scrollbar padrão Chrome */
+    display: none;
 }
 
 .timeline-container:active {
     cursor: grabbing;
 }
 
+/* TIMELINE RABISCADA PUNK */
 .timeline {
     display: flex;
-    gap: 4rem;
-    padding: 0 4rem;
+    gap: 15rem; /* ESPAÇO ENORME PARA IMAGENS */
+    padding: 0 10rem;
     min-width: max-content;
     position: relative;
-    min-height: 200px;
+    height: 100%;
     align-items: center;
 }
 
-/* BARRA DE SCROLL PERSONALIZADA */
+/* LINHA RABISCADA - ESTILO PUNK */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    right: 5rem;
+    height: 6px;
+    background: 
+        linear-gradient(90deg, 
+            transparent 0%, 
+            var(--vermelho-sangue) 10%,
+            var(--amarelo-alerta) 30%,
+            var(--vermelho-sangue) 70%,
+            transparent 100%
+        );
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 3px;
+    box-shadow: 
+        0 0 10px var(--vermelho-sangue),
+        0 0 20px var(--amarelo-alerta);
+}
+
+/* EFEITO DE RABISCO NA LINHA */
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    right: 5rem;
+    height: 8px;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            var(--preto-absoluto) 2px,
+            var(--preto-absoluto) 4px
+        );
+    transform: translateY(-50%);
+    z-index: 2;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* BOTÕES PUNK (SEM RAIO) */
+.decade-btn {
+    background: var(--amarelo-alerta);
+    color: var(--preto-absoluto);
+    border: 4px solid var(--preto-absoluto);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 
+        0 4px 0 var(--preto-absoluto),
+        0 0 15px var(--amarelo-alerta);
+}
+
+.decade-btn:hover {
+    transform: scale(1.15);
+    background: var(--vermelho-sangue);
+    color: var(--branco-puro);
+    box-shadow: 
+        0 4px 0 var(--preto-absoluto),
+        0 0 20px var(--vermelho-sangue);
+}
+
+/* CONTAINER DA BARRA DE SCROLL */
 .timeline-scroll-container {
     padding: 1.5rem 2rem;
     background: var(--preto-absoluto);
@@ -122,71 +114,82 @@
 }
 
 .timeline-scroll-bar {
-    width: 100%;
-    height: 12px;
+    width: 60%;
+    height: 16px;
     background: var(--cinza-asfalto);
-    border-radius: 6px;
+    border-radius: 8px;
     position: relative;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     cursor: pointer;
+    border: 2px solid var(--vermelho-sangue);
 }
 
 .timeline-scroll-thumb {
-    width: 40%;
+    width: 100px;
     height: 100%;
     background: var(--amarelo-alerta);
     border-radius: 6px;
     position: absolute;
     left: 0;
     transition: left 0.2s ease;
-    box-shadow: 0 0 5px var(--amarelo-alerta);
+    box-shadow: 0 0 10px var(--amarelo-alerta);
 }
 
 .timeline-scroll-thumb:hover {
     background: var(--vermelho-sangue);
 }
 
-.timeline-scroll-text {
-    font-family: var(--fonte-titulo);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: var(--branco-puro);
-    text-align: center;
+/* BOTÕES DE CONTROLE */
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
 }
 
-/* BOTÕES DAS DÉCADAS - Ajustados para scroll horizontal */
-.decade-btn {
-    background: var(--amarelo-alerta);
-    color: var(--preto-absoluto);
-    border: 3px solid var(--preto-absoluto);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-family: var(--fonte-titulo);
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.decade-btn:hover {
-    transform: scale(1.15);
+.scroll-btn {
     background: var(--vermelho-sangue);
     color: var(--branco-puro);
+    border: 2px solid var(--branco-puro);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Linha da timeline ajustada para scroll */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 2rem;
-    right: 2rem;
-    height: 2px;
-    background: var(--branco-puro);
-    transform: translateY(-50%);
-    z-index: 1;
+.scroll-btn:hover {
+    background: var(--amarelo-alerta);
+    color: var(--preto-absoluto);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .timeline {
+        gap: 8rem;
+        padding: 0 5rem;
+    }
+    
+    .decade-btn {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+    
+    .timeline-scroll-bar {
+        width: 80%;
+    }
+    
+    .scroll-controls {
+        gap: 1rem;
+    }
+    
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }

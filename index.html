@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +8,39 @@
     <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="stylesheet" href="assets/css/modal.css">
 </head>
-
 <body>
+    <!-- HEADER COMPACTO -->
     <header class="hero">
         <h1 class="hero__title">ABUTRIS</h1>
-
-        <p class="hero__description">
-            INFORMAÇÕES SOBRE O SITE, BREVE DESCRIÇÃO E<br>
-            BLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁ...
-        </p>
-
         <p class="hero__subtitle">HISTÓRIA DO CAOS</p>
-        <div class="hero__scroll-indicator">↓</div>
     </header>
 
-    <div class="timeline-container">
-        <main class="timeline" id="timeline">
-            <!-- Os botões das décadas serão inseridos aqui pelo JavaScript -->
-        </main>
-    </div>
-
-    <div class="timeline-scroll-container">
-        <div class="timeline-scroll-bar">
-            <div class="timeline-scroll-thumb"></div>
+    <!-- TIMELINE COMO PONTO CENTRAL -->
+    <div class="main-content">
+        <div class="timeline-wrapper">
+            <div class="timeline-container" id="timeline-container">
+                <div class="timeline" id="timeline">
+                    <!-- Os botões das décadas serão inseridos aqui -->
+                </div>
+            </div>
+            
+            <!-- BARRA DE SCROLL CUSTOMIZADA -->
+            <div class="timeline-scroll-container">
+                <div class="timeline-scroll-bar">
+                    <div class="timeline-scroll-thumb"></div>
+                </div>
+                <div class="scroll-controls">
+                    <button class="scroll-btn" id="scroll-left">←</button>
+                    <button class="scroll-btn" id="scroll-right">→</button>
+                </div>
+            </div>
         </div>
-        <p class="timeline-scroll-text">Use a barra abaixo ou arraste a timeline para os lados</p>
     </div>
 
+    <!-- MODAL -->
     <div class="modal" id="modal">
         <div class="modal__content">
-            <button class="modal__close" id="modal-close">X</button>
+            <button class="modal__close" id="modal-close">✕</button>
             <h2 class="modal__title" id="modal-title"></h2>
             <p class="modal__description" id="modal-description"></p>
             <div class="modal__bands" id="modal-bands"></div>
@@ -48,5 +50,4 @@
 
     <script src="assets/js/main.js"></script>
 </body>
-
-</html>
+</html> 
