@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abutris - História do Punk Rock</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
 </head>
 <body>
-    <!-- Cabeçalho Hero -->
     <header class="hero">
         <h1 class="hero__title">ABUTRIS</h1>
+        
+        <p class="hero__description">
+            INFORMAÇÕES SOBRE O SITE, BREVE DESCRIÇÃO E<br>
+            BLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁBLÁ...
+        </p>
+
         <p class="hero__subtitle">HISTÓRIA DO CAOS</p>
-        <div class="hero__scroll-indicator">
-            ↓
-        </div>
+        <div class="hero__scroll-indicator">↓</div>
     </header>
 
-    <!-- Linha do Tempo -->
     <main class="timeline" id="timeline">
         <!-- Os botões das décadas serão inseridos aqui pelo JavaScript -->
     </main>
 
-    <!-- Modal/Popup -->
+    <div class="scroll-guide">
+        <div class="scroll-guide__bar"></div>
+        <p class="scroll-guide__text">ESSA BARRA REPRESENTA A BARRA DE SCROLL DA TIMELINE ONDE VAI DE UM LADO PARA O OUTRO</p>
+    </div>
+
     <div class="modal" id="modal">
         <div class="modal__content">
             <button class="modal__close" id="modal-close">X</button>
@@ -32,7 +40,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

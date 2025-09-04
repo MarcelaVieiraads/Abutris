@@ -1,0 +1,108 @@
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+}
+
+.modal__content {
+    position: relative;
+    background: var(--preto-absoluto);
+    margin: 5% auto;
+    padding: 2.5rem;
+    width: 85%;
+    max-width: 800px;
+    border: 4px solid var(--vermelho-sangue);
+    box-shadow: 0 0 20px rgba(211, 47, 47, 0.3);
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--vermelho-sangue);
+    color: var(--branco-puro);
+    border: 2px solid var(--branco-puro);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: var(--fonte-titulo);
+    transition: all 0.3s ease;
+}
+
+.modal__close:hover {
+    background: var(--amarelo-alerta);
+    color: var(--preto-absoluto);
+}
+
+.modal__title {
+    color: var(--vermelho-sangue);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--fonte-titulo);
+    text-shadow: 2px 2px 0px var(--preto-absoluto);
+}
+
+.modal__description {
+    color: var(--branco-puro);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.modal__bands {
+    margin-bottom: 2rem;
+}
+
+.modal__band-item {
+    color: var(--branco-puro);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    list-style-type: '• ';
+    padding-left: 0.5rem;
+}
+
+.modal__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal__link {
+    color: var(--amarelo-alerta);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal__link:hover {
+    color: var(--vermelho-sangue);
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE DO MODAL */
+@media (max-width: 768px) {
+    .modal__content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+    
+    .modal__title {
+        font-size: 2.2rem;
+    }
+    
+    .modal__description {
+        font-size: 1rem;
+    }
+    
+    .modal__band-item {
+        font-size: 1rem;
+    }
+}

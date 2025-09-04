@@ -2,21 +2,31 @@
     {
         "decade": "1970",
         "title": "O SURGIMENTO",
-        "summary": "O punk rock emerge como um movimento de rebeldia e DIY...",
-        "bands": ["Sex Pistols", "The Ramones", "The Clash", "Iggy Pop"],
+        "summary": "O punk rock emerge como um movimento de rebeldia contra o establishment musical. Bandas como Sex Pistols e Ramones criam um som cru e direto que viria a definir toda uma geração.",
+        "bands": ["Sex Pistols", "The Ramones", "The Clash", "Iggy Pop & The Stooges"],
         "links": [
-            {"text": "Documentário BBC", "url": "https://exemplo.com/doc1"},
-            {"text": "Artigo Rolling Stone", "url": "https://exemplo.com/artigo1"}
+            {"text": "Documentário - História do Punk", "url": "https://exemplo.com/doc-punk"},
+            {"text": "Artigo - Anos 70", "url": "https://exemplo.com/anos70"}
         ]
     },
     {
         "decade": "1980",
         "title": "A EXPLOSÃO",
-        "summary": "O hardcore punk ganha força com bandas rápidas e agressivas...",
+        "summary": "O hardcore punk ganha força com bandas cada vez mais rápidas e agressivas. A cena underground se fortalece com selos independentes e uma ética DIY forte.",
         "bands": ["Dead Kennedys", "Bad Religion", "Black Flag", "Minor Threat"],
         "links": [
-            {"text": "Cena Hardcore NY", "url": "https://exemplo.com/hardcore"},
-            {"text": "Documentário 80s", "url": "https://exemplo.com/doc80s"}
+            {"text": "Cena Hardcore Americana", "url": "https://exemplo.com/hardcore-usa"},
+            {"text": "Documentário - Anos 80", "url": "https://exemplo.com/anos80"}
+        ]
+    },
+    {
+        "decade": "1990",
+        "title": "A EVOLUÇÃO",
+        "summary": "O punk alcança o mainstream enquanto mantém suas raízes underground. Bandas como Green Day e The Offspring levam o som para as rádios, mas a cena independente continua forte.",
+        "bands": ["Green Day", "The Offspring", "Rancid", "NOFX"],
+        "links": [
+            {"text": "Green Day - Dookie", "url": "https://exemplo.com/greenday"},
+            {"text": "The Offspring - Smash", "url": "https://exemplo.com/offspring"}
         ]
     }
 ]

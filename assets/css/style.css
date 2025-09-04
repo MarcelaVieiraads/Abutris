@@ -1,13 +1,16 @@
-/* Variáveis de cores e fontes */
+/* VARIÁVEIS - PALETA PUNK CLÁSSICA */
 :root {
-    --cor-fundo: #000000;
-    --cor-texto: #FFFFFF;
-    --cor-destaque: #FF0000;
+    --preto-absoluto: #000000;
+    --branco-puro: #FFFFFF;
+    --vermelho-sangue: #D32F2F;
+    --amarelo-alerta: #FBC02D;
+    --cinza-asfalto: #424242;
+    
     --fonte-titulo: 'Impact', 'Haettenschweiler', sans-serif;
     --fonte-texto: 'Arial', sans-serif;
 }
 
-/* Reset básico */
+/* RESET E CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -15,44 +18,54 @@
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    background-color: var(--preto-absoluto);
+    color: var(--branco-puro);
     font-family: var(--fonte-texto);
     line-height: 1.6;
+    text-align: center;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background: url('../images/background.jpg') no-repeat center center/cover;
+    padding: 2rem;
     position: relative;
 }
 
 .hero__title {
     font-family: var(--fonte-titulo);
-    font-size: 8rem;
-    color: var(--cor-destaque);
+    font-size: 4rem;
+    color: var(--vermelho-sangue);
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
     margin-bottom: 1rem;
+    text-shadow: 3px 3px 0px var(--preto-absoluto);
+    letter-spacing: 2px;
+}
+
+.hero__description {
+    font-family: var(--fonte-titulo);
+    margin: 1rem 0;
+    line-height: 1.4;
+    color: var(--branco-puro);
 }
 
 .hero__subtitle {
     font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-    margin-bottom: 2rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    color: var(--branco-puro);
+    letter-spacing: 1px;
 }
 
 .hero__scroll-indicator {
     font-size: 3rem;
-    position: absolute;
-    bottom: 2rem;
     animation: bounce 2s infinite;
+    color: var(--amarelo-alerta);
 }
 
 @keyframes bounce {
@@ -61,88 +74,43 @@ body {
     60% {transform: translateY(-15px);}
 }
 
-/* Timeline */
-.timeline {
-    display: flex;
-    overflow-x: auto;
+/* BARRA DE SCROLL EXPLICATIVA */
+.scroll-guide {
     padding: 2rem;
-    gap: 2rem;
-    min-height: 300px;
-    background: #111;
+    background: var(--cinza-asfalto);
+    border-top: 2px solid var(--vermelho-sangue);
 }
 
-.decade-btn {
-    background: var(--cor-destaque);
-    color: var(--cor-fundo);
-    border: none;
-    padding: 1rem 2rem;
+.scroll-guide__bar {
+    height: 8px;
+    background-color: var(--branco-puro);
+    margin: 0 auto 1rem;
+    width: 300px;
+    border-radius: 4px;
+}
+
+.scroll-guide__text {
     font-family: var(--fonte-titulo);
-    font-size: 2rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--branco-puro);
 }
 
-.decade-btn:hover {
-    transform: scale(1.1);
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-}
-
-.modal__content {
-    position: relative;
-    background: #000;
-    margin: 5% auto;
-    padding: 2rem;
-    width: 80%;
-    max-width: 800px;
-    border: 3px solid var(--cor-destaque);
-}
-
-.modal__close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--cor-destaque);
-    color: #000;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.modal__title {
-    color: var(--cor-destaque);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.modal__description {
-    margin-bottom: 1.5rem;
-}
-
-/* Responsividade */
+/* RESPONSIVIDADE GERAL */
 @media (max-width: 768px) {
     .hero__title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     
-    .timeline {
-        flex-direction: column;
+    .hero__description {
+        font-size: 0.9rem;
     }
     
-    .modal__content {
-        width: 95%;
-        margin: 10% auto;
+    .scroll-guide__bar {
+        width: 200px;
+    }
+    
+    .scroll-guide__text {
+        font-size: 0.8rem;
     }
 }

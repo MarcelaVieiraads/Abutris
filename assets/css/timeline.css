@@ -1,0 +1,83 @@
+/* TIMELINE */
+.timeline {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem 2rem;
+    background: var(--cinza-asfalto);
+    position: relative;
+    min-height: 200px;
+    align-items: center;
+    border-top: 3px solid var(--vermelho-sangue);
+    border-bottom: 3px solid var(--vermelho-sangue);
+}
+
+/* Linha horizontal da timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 2px;
+    background: var(--branco-puro);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Botões das décadas como BOLINHAS */
+.decade-btn {
+    background: var(--amarelo-alerta);
+    color: var(--preto-absoluto);
+    border: 3px solid var(--preto-absoluto);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.decade-btn:hover {
+    transform: scale(1.2);
+    background: var(--vermelho-sangue);
+    color: var(--branco-puro);
+}
+
+/* Ícone nos botões (opcional) */
+.decade-btn::after {
+    content: '⚡';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVIDADE DA TIMELINE */
+@media (max-width: 768px) {
+    .timeline {
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .decade-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.1rem;
+    }
+    
+    .decade-btn::after {
+        top: -25px;
+        font-size: 1.3rem;
+    }
+}
