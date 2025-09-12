@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abutris - História do Punk Rock</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/timeline.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abutris - História do Punk Rock</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Elite&family=Staatliches&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/timeline.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
 </head>
 <body>
-    <!-- HEADER COMPACTO -->
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
     <header class="hero">
-        <h1 class="hero__title">ABUTRIS</h1>
-        <p class="hero__subtitle">HISTÓRIA DO CAOS</p>
+     <h1 class="punk-title">
+  <span>A</span>
+  <span>B</span>
+  <span>U</span>
+  <span>T</span>
+  <span>R</span>
+  <span>I</span>
+  <span>S</span>
+</h1>
+      <p class="hero__subtitle">HISTÓRIA DO CAOS</p>
     </header>
 
-    <!-- TIMELINE COMO PONTO CENTRAL -->
-    <div class="main-content">
-        <div class="timeline-wrapper">
-            <div class="timeline-container" id="timeline-container">
-                <div class="timeline" id="timeline">
-                    <!-- Os botões das décadas serão inseridos aqui -->
-                </div>
-            </div>
-            
-            <!-- BARRA DE SCROLL CUSTOMIZADA -->
-            <div class="timeline-scroll-container">
-                <div class="timeline-scroll-bar">
-                    <div class="timeline-scroll-thumb"></div>
-                </div>
-                <div class="scroll-controls">
-                    <button class="scroll-btn" id="scroll-left">←</button>
-                    <button class="scroll-btn" id="scroll-right">→</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- TIMELINE -->
+    <section id="timeline-section" class="section">
+      <div class="timeline-container" id="timeline-container" aria-label="Linha do Tempo">
+        <div class="timeline" id="timeline" role="list"></div>
+      </div>
+
+      <div class="timeline-scroll-controls">
+        <button class="scroll-btn" id="scroll-left" aria-label="Scroll esquerda">←</button>
+        <button class="scroll-btn" id="scroll-right" aria-label="Scroll direita">→</button>
+      </div>
+    </section>
 
     <!-- MODAL -->
-    <div class="modal" id="modal">
-        <div class="modal__content">
-            <button class="modal__close" id="modal-close">✕</button>
-            <h2 class="modal__title" id="modal-title"></h2>
-            <p class="modal__description" id="modal-description"></p>
-            <div class="modal__bands" id="modal-bands"></div>
-            <div class="modal__links" id="modal-links"></div>
-        </div>
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal__overlay" id="modal-overlay"></div>
+      <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" id="modal-close" aria-label="Fechar">✕</button>
+        <h2 id="modal-title" class="modal__title"></h2>
+        <p id="modal-description" class="modal__description"></p>
+        <ul id="modal-bands" class="modal__bands"></ul>
+        <div id="modal-links" class="modal__links"></div>
+      </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <footer class="footer">
+      <p>ABUTRIS © <span id="year"></span> — Punk is not dead</p>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
-</html> 
+</html>

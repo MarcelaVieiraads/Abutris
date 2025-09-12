@@ -1,68 +1,68 @@
-:root {
-    --preto-absoluto: #000000;
-    --branco-puro: #FFFFFF;
-    --vermelho-sangue: #D32F2F;
-    --amarelo-alerta: #FBC02D;
-    --cinza-asfalto: #424242;
-    
-    --fonte-titulo: 'Impact', 'Haettenschweiler', sans-serif;
-    --fonte-texto: 'Arial', sans-serif;
+/* reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Variáveis de cor */
+:root{
+  --punk-red: #ff003c;
+  --punk-yellow: #ffd400;
+  --punk-black: #000;
+  --paper-bg: url('../images/bg-paper.jpg');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Fundo preto nas laterais */
 body {
-    background-color: var(--preto-absoluto);
-    color: var(--branco-puro);
-    font-family: var(--fonte-texto);
-    line-height: 1.6;
-    text-align: center;
-    overflow: hidden; /* REMOVE SCROLL DO NAVEGADOR */
-    height: 100vh;
+  background: var(--punk-black);
+  font-family: 'Special Elite', cursive;
+  color: #111;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER COMPACTO NO TOPO */
+/* Container central - papel amassado */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 2.5rem;
+  background: var(--paper-bg) repeat;
+  background-size: cover;
+  box-shadow: 0 0 50px rgba(0,0,0,0.9);
+  position: relative;
+  overflow: visible;
+}
+
+/* Header */
 .hero {
-    height: 25vh; /* 1/4 da tela */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--preto-absoluto);
-    padding: 1rem;
-    border-bottom: 3px solid var(--vermelho-sangue);
+  text-align: center;
+  padding: 2rem 1rem 1.5rem 1rem;
 }
 
 .hero__title {
-    font-family: var(--fonte-titulo);
-    font-size: 3.5rem;
-    color: var(--vermelho-sangue);
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    text-shadow: 3px 3px 0px var(--preto-absoluto);
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 4.2rem;
+  color: var(--punk-red);
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.7);
 }
 
 .hero__subtitle {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: var(--branco-puro);
-    letter-spacing: 2px;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.2rem;
+  color: #222;
+  margin-top: 0.6rem;
+  letter-spacing: 3px;
 }
 
-/* CONTEÚDO PRINCIPAL - 3/4 DA TELA */
-.main-content {
-    height: 75vh; /* 3/4 da tela */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--cinza-asfalto);
+/* Footer */
+.footer{
+  text-align:center;
+  padding: 2rem 0 1rem 0;
+  color: #222;
+  font-size: 0.9rem;
 }
 
-.timeline-wrapper {
-    width: 100%;
-    position: relative;
+/* Utility */
+.visually-hidden{
+  position:absolute !important;
+  height:1px; width:1px; overflow:hidden;
+  clip:rect(1px,1px,1px,1px);
 }
