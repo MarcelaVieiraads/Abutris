@@ -1,68 +1,122 @@
-/* reset básico */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* Variáveis de cor */
 :root{
-  --punk-red: #ff003c;
-  --punk-yellow: #ffd400;
-  --punk-black: #000;
-  --paper-bg: url('../images/bg-paper.jpg');
+  --bg: #0b0b0b;
+  --panel: rgba(0,0,0,0.48);
+  --accent: #d32b2b; /* vermelho punk */
+  --muted: #bdbdbd;
+  --white: #ffffff;
 }
 
-/* Fundo preto nas laterais */
-body {
-  background: var(--punk-black);
-  font-family: 'Special Elite', cursive;
-  color: #111;
-  -webkit-font-smoothing: antialiased;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg);
+  color: var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Container central - papel amassado */
-.page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 2.5rem;
-  background: var(--paper-bg) repeat;
-  background-size: cover;
-  box-shadow: 0 0 50px rgba(0,0,0,0.9);
-  position: relative;
-  overflow: visible;
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
 }
 
-/* Header */
-.hero {
-  text-align: center;
-  padding: 2rem 1rem 1.5rem 1rem;
+/* header */
+.site-header{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:60;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
+  padding:10px 0;
 }
+.header-logo{height:36px}
 
-.hero__title {
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 4.2rem;
-  color: var(--punk-red);
-  letter-spacing: 3px;
-  text-shadow: 4px 4px 0 rgba(0,0,0,0.7);
-}
-
-.hero__subtitle {
-  font-family: 'Staatliches', sans-serif;
-  font-size: 1.2rem;
-  color: #222;
-  margin-top: 0.6rem;
-  letter-spacing: 3px;
-}
-
-/* Footer */
-.footer{
+/* HERO (primeira tela) */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding: 2rem 0 1rem 0;
-  color: #222;
-  font-size: 0.9rem;
+  background-image: url('../images/bg-paper.jpg');
+  background-size:cover;
+  background-position:center;
+  padding:2rem 0;
 }
 
-/* Utility */
-.visually-hidden{
-  position:absolute !important;
-  height:1px; width:1px; overflow:hidden;
-  clip:rect(1px,1px,1px,1px);
+.hero-inner{
+  max-width:920px;
+  padding:2rem;
+  background: var(--panel);
+  border-radius:8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.hero-logo{width:120px;height:auto;margin:0 auto 0.6rem;display:block}
+.hero-title{
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-size: clamp(36px, 8vw, 86px);
+  color: var(--accent);
+  margin: 0 0 6px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.hero-subtitle{color:var(--muted); margin:0 0 1rem; font-weight:700; text-transform:uppercase}
+.hero-desc{color:var(--muted); margin:0 0 1.4rem; font-size:1.05rem; line-height:1.5}
+
+/* Scroll hint (seta) */
+.scroll-link{display:inline-block;text-decoration:none}
+.arrow{
+  display:inline-block;
+  width:42px;
+  height:42px;
+  border-left:4px solid var(--accent);
+  border-bottom:4px solid var(--accent);
+  transform:rotate(-45deg);
+  margin-top:8px;
+  animation: bounce 1.6s infinite;
+}
+@keyframes bounce{
+  0%{transform:translateY(0) rotate(-45deg)}
+  50%{transform:translateY(10px) rotate(-45deg)}
+  100%{transform:translateY(0) rotate(-45deg)}
+}
+
+/* timeline placeholder (segunda tela) */
+.timeline-section{
+  min-height:100vh;
+  padding:4rem 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, #080808 0%, #0f0f0f 100%);
+}
+.timeline-placeholder{
+  max-width:880px;
+  text-align:center;
+  padding:2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.timeline-placeholder h2{color:var(--accent); margin:0 0 0.5rem}
+.timeline-placeholder p{color:var(--muted); margin:0}
+
+/* acessibilidade - sr-only */
+.sr-only{
+  position:absolute!important;
+  height:1px; width:1px;
+  overflow:hidden; clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;
+}
+
+/* responsivo */
+@media (max-width:720px){
+  .hero-inner{padding:1.2rem}
+  .hero-logo{width:90px}
+  .hero-title{font-size: clamp(28px, 12vw, 56px)}
+  .hero-desc{font-size:0.98rem}
 }

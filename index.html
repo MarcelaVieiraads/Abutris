@@ -1,64 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abutris - História do Punk Rock</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Elite&family=Staatliches&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abutris — História do Caos</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/timeline.css">
-  <link rel="stylesheet" href="assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/timeline.css" />
+  <link rel="stylesheet" href="assets/css/modal.css" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page-wrapper">
+  <header class="site-header" role="banner">
+    <div class="container">
+      <img src="assets/images/logo.png" alt="Logotipo Abutris" class="header-logo" />
+    </div>
+  </header>
 
-    <!-- HEADER -->
-    <header class="hero">
-     <h1 class="punk-title">
-  <span>A</span>
-  <span>B</span>
-  <span>U</span>
-  <span>T</span>
-  <span>R</span>
-  <span>I</span>
-  <span>S</span>
-</h1>
-      <p class="hero__subtitle">HISTÓRIA DO CAOS</p>
-    </header>
+  <main>
+    <!-- Primeira tela (hero / introdução) -->
+    <section class="hero" id="hero" role="region" aria-label="Introdução - Abutris">
+      <div class="hero-inner container">
+        <img class="hero-logo" src="assets/images/logo.png" alt="Logotipo Abutris" />
+        <h1 class="hero-title">Abutris</h1>
+        <p class="hero-subtitle">História do Caos</p>
 
-    <!-- TIMELINE -->
-    <section id="timeline-section" class="section">
-      <div class="timeline-container" id="timeline-container" aria-label="Linha do Tempo">
-        <div class="timeline" id="timeline" role="list"></div>
-      </div>
+        <p class="hero-desc">
+          Uma linha do tempo interativa sobre a história do punk rock — explore décadas, bandas, imagens e episódios que moldaram o movimento.
+        </p>
 
-      <div class="timeline-scroll-controls">
-        <button class="scroll-btn" id="scroll-left" aria-label="Scroll esquerda">←</button>
-        <button class="scroll-btn" id="scroll-right" aria-label="Scroll direita">→</button>
+        <a href="#timeline" class="scroll-link" id="scrollToTimeline" aria-label="Ir para a linha do tempo">
+          <span class="arrow" aria-hidden="true"></span>
+          <span class="sr-only">Descer para a timeline</span>
+        </a>
       </div>
     </section>
 
-    <!-- MODAL -->
-    <div class="modal" id="modal" aria-hidden="true">
-      <div class="modal__overlay" id="modal-overlay"></div>
-      <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button class="modal__close" id="modal-close" aria-label="Fechar">✕</button>
-        <h2 id="modal-title" class="modal__title"></h2>
-        <p id="modal-description" class="modal__description"></p>
-        <ul id="modal-bands" class="modal__bands"></ul>
-        <div id="modal-links" class="modal__links"></div>
+    <!-- Placeholder da segunda tela (timeline) -->
+    <section id="timeline" class="timeline-section" role="region" aria-label="Linha do tempo">
+      <div class="timeline-placeholder container">
+        <h2>Timeline — Em desenvolvimento</h2>
+        <p>Na próxima etapa implementarei a timeline horizontal com scroll, círculos por década e popups.</p>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p>ABUTRIS © <span id="year"></span> — Punk is not dead</p>
-    </footer>
-  </div>
-
+  <!-- JS -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/timeline.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
 </body>
 </html>
