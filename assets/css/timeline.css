@@ -1,5 +1,118 @@
-/* timeline.css
-   Aqui virão os estilos específicos da timeline horizontal (Etapa 2).
-   Mantive este arquivo separado para modularidade.
-*/
+/* ===============================
+   TIMELINE HORIZONTAL
+   =============================== */
 
+.timeline-section {
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+}
+
+/* container que segura a linha */
+.timeline-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: max-content;
+  padding: 0 10vw;
+  gap: 10vw;
+}
+
+/* trilho da timeline */
+.timeline-track {
+  display: flex;
+  align-items: center;
+  gap: 14vw;
+  position: relative;
+  padding: 60px 0; 
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  transform: translateY(-50%);
+  background: url('../images/line-scribble.png') repeat-x;
+  background-size: contain;
+  opacity: 0.6;
+  z-index: -1; /* fica atrás dos círculos */
+}
+
+/* cada ponto (ano) */
+.timeline-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.timeline-circle:hover {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+/* detalhe estilo anarquia */
+.timeline-circle::before,
+.timeline-circle::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+}
+.timeline-circle::before {
+  width: 160px;
+  height: 160px;
+}
+.timeline-circle::after {
+  width: 180px;
+  height: 180px;
+}
+
+/* título abaixo do círculo */
+.timeline-title {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* imagens decorativas */
+.timeline-decor {
+  position: absolute;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+.timeline-decor img {
+  max-width: 180px;
+  height: auto;
+  transform: rotate(-10deg);
+}
+.decor-1 { top: 10%; left: 20%; }
+.decor-2 { bottom: 15%; right: 25%; }
+.decor-3 { top: 30%; right: 10%; }
