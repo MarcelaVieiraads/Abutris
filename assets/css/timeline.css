@@ -43,12 +43,14 @@
   top: 50%;
   left: 0;
   right: 0;
-  height: 8px;
+  height: 200px; /* altura do rabisco */
   transform: translateY(-50%);
-  background: url('../images/line-scribble.png') repeat-x;
-  background-size: contain;
-  opacity: 0.6;
-  z-index: -1; /* fica atrás dos círculos */
+  
+  background: url('../images/RabiscoVermelho.png') no-repeat center;
+  background-size: 90% 100%; /* estica a largura E altura */
+  
+  opacity: 0.9;
+  z-index: 0;
 }
 
 /* cada ponto (ano) */
@@ -98,7 +100,7 @@
 }
 
 .timeline-circle-img {
-  width: 150px;
+  width: 225px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;

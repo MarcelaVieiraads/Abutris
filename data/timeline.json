@@ -17,6 +17,7 @@
     {
       "id": "1980",
       "year": 1980,
+      "icon": "assets/images/decades/1980.png",
       "summary": "O punk se ramifica em subgêneros e cenas locais ao redor do mundo.",
       "content": "Texto explicativo da década de 80...",
       "images": [
@@ -27,6 +28,7 @@
     {
       "id": "1990",
       "year": 1990,
+      "icon": "assets/images/decades/1990.png",
       "summary": "Anos 90: algumas bandas levam elementos do punk ao mainstream.",
       "content": "Detalhes sobre a década de 90...",
       "images": [],
@@ -35,6 +37,7 @@
     {
       "id": "2000",
       "year": 2000,
+      "icon": "assets/images/decades/2000.png",
       "summary": "Década com experimentalismos e resgates do punk.",
       "content": "Texto 2000...",
       "images": [],
@@ -43,6 +46,7 @@
     {
       "id": "2010",
       "year": 2010,
+      "icon": "assets/images/decades/2010.png",
       "summary": "O punk como referência cultural e estético até os dias atuais.",
       "content": "Texto 2010...",
       "images": [],
@@ -51,6 +55,7 @@
     {
       "id": "atual",
       "year": "Presente",
+      "icon": "assets/images/decades/Presente.png",
       "summary": "Reflexões contemporâneas e cenas atuais.",
       "content": "Texto atualidade...",
       "images": [],
