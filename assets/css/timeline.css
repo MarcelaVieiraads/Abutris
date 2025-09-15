@@ -11,8 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+
+  background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(17,17,17,0.8) 100%),
+              url('../images/backgroundpunk.png') center/cover no-repeat;
 }
+
 
 /* container que segura a linha */
 .timeline-container {
@@ -94,11 +97,14 @@
   height: 180px;
 }
 
-/* título abaixo do círculo */
-.timeline-title {
-  color: var(--muted);
-  font-size: 1rem;
-  margin-top: 0.5rem;
+.timeline-circle-img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.timeline-circle-img:hover {
+  transform: scale(1.1) rotate(-3deg);
 }
 
 /* imagens decorativas */

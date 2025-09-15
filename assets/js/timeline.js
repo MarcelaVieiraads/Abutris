@@ -11,9 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const item = document.createElement("div");
         item.className = "timeline-item";
 
-        const circle = document.createElement("div");
-        circle.className = "timeline-circle";
-        circle.textContent = decade.year;
+        let circle;
+        if (decade.icon) {
+          circle = document.createElement("img");
+          circle.src = decade.icon;
+          circle.alt = `Década de ${decade.year}`;
+          circle.className = "timeline-circle-img";
+        } else {
+          circle = document.createElement("div");
+          circle.className = "timeline-circle";
+          circle.textContent = decade.year;
+        }
 
         circle.addEventListener("click", () => {
           console.log(`Abrir modal para ${decade.year}`);
