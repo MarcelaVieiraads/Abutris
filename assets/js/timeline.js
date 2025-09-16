@@ -46,21 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
 function addDecorations() {
   const section = document.getElementById("timeline");
 
-  const decor1 = document.createElement("div");
-  decor1.className = "timeline-decor decor-1";
-  decor1.innerHTML = `<img src="assets/images/punk.jpg" alt="Figura punk">`;
+  // lista de imagens e classes de posição
+  const decorations = [
+    { src: "assets/images/timeline/AlbumRamones.gif", alt: "Álbum Ramones", class: "decor-1" },
+    { src: "assets/images/timeline/TheClashGuitarra.gif", alt: "The Clash Guitarrista", class: "decor-2" },
+    { src: "assets/images/timeline/AlbumSexPistols.gif", alt: "Album Sex Pistols queimando", class: "decor-3" },
+    { src: "assets/images/timeline/PersonagemPunk.gif", alt: "Personagem Punk tocando guitarra", class: "decor-4" },
+    { src: "assets/images/timeline/AlbumGreenDay.gif", alt: "Álbum Green Day", class: "decor-5" },
+    { src: "assets/images/timeline/IggyPop.gif", alt: "Iggy Pop girando guitarra", class: "decor-6" },
+    { src: "assets/images/timeline/JovemPunk.gif", alt: "Jovem Punk", class: "decor-7" }
+  ];
 
-  const decor2 = document.createElement("div");
-  decor2.className = "timeline-decor decor-2";
-  decor2.innerHTML = `<img src="assets/images/background.jpg" alt="Cenário punk">`;
-
-  const decor3 = document.createElement("div");
-  decor3.className = "timeline-decor decor-3";
-  decor3.innerHTML = `<img src="assets/images/logo.png" alt="Logo estilizada">`;
-
-  section.appendChild(decor1);
-  section.appendChild(decor2);
-  section.appendChild(decor3);
+  // cria cada imagem
+  decorations.forEach(decor => {
+    const div = document.createElement("div");
+    div.className = `timeline-decor ${decor.class}`;
+    div.innerHTML = `<img src="${decor.src}" alt="${decor.alt}">`;
+    section.appendChild(div);
+  });
 }
 
 // navegação snap por snap com setas

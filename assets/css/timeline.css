@@ -13,7 +13,7 @@
   justify-content: flex-start;
 
   background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(17,17,17,0.8) 100%),
-              url('../images/backgroundpunk.png') center/cover no-repeat;
+              url('../images/timeline/backgroundpunk.png') center/cover no-repeat;
 }
 
 
@@ -43,10 +43,10 @@
   top: 50%;
   left: 0;
   right: 0;
-  height: 200px; /* altura do rabisco */
+  height: 450px; /* altura do rabisco */
   transform: translateY(-50%);
   
-  background: url('../images/RabiscoVermelho.png') no-repeat center;
+  background: url('../images/timeline/LinhaTimelineVermelha.png ') no-repeat center;
   background-size: 90% 100%; /* estica a largura E altura */
   
   opacity: 0.9;
@@ -109,10 +109,10 @@
   transform: scale(1.1) rotate(-3deg);
 }
 
-/* imagens decorativas */
+
 .timeline-decor {
   position: absolute;
-  opacity: 0.25;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 }
@@ -121,6 +121,15 @@
   height: auto;
   transform: rotate(-10deg);
 }
-.decor-1 { top: 10%; left: 20%; }
-.decor-2 { bottom: 15%; right: 25%; }
-.decor-3 { top: 30%; right: 10%; }
+
+/*imagens parte de cima da timeline*/
+.decor-1 { top: 15%; left: 25%; }
+.decor-2 { top: 20%; left: 83%; }
+.decor-3 { top: 20%; left: 142%; }
+.decor-4 { bottom: 18%; right: -75%; }
+
+/* imagens parte de baixo da timeline*/
+.decor-5 { bottom: 15%; right: 35%; }
+.decor-6 { bottom: 20%; right: -24%; }
+.decor-7 { bottom: 15%; right: 80%; }
+
