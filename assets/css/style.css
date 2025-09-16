@@ -26,7 +26,7 @@ body{
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 0; left: 0;
+  top: 5; left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -35,14 +35,14 @@ body{
   background: transparent;
 }
 .navbar a {
-  font-family: 'Archivo Black', Impact, sans-serif;
-  font-size: 0.9rem;
-  color: var(--white);
+  font-family: 'Special Elite', Impact, sans-serif;
+  font-size: 1.3rem;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s;
 }
 .navbar a:hover {
-  color: var(--accent);
+  color: var(--white);
 }
 
 /* ===== HERO (primeira tela) ===== */
@@ -63,28 +63,24 @@ body{
   max-width: 800px;
   margin: 0 auto;
   z-index: 1;
-
-  background: var(--panel);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .hero-logo {
-  max-width: 280px;
-  margin-bottom: 20px;
+  max-width: 650px;
+  margin-bottom: 10px;
 }
 .hero-subtitle {
-  font-family: 'Archivo Black', Impact, sans-serif;
-  font-size: 1.6rem;
+  font-family: 'Special Elite', Impact, sans-serif;
+  font-size: 2.5rem;
   color: var(--accent);
   margin: 10px 0;
   text-transform: uppercase;
 }
 .hero-desc {
-  font-size: 1rem;
-  color: #eee;
-  margin: 0 0 1.4rem;
+  font-family: 'Special Elite', Impact, sans-serif;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 0 0rem;
   line-height: 1.5;
 }
 
@@ -93,13 +89,14 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
+  gap: 0px;
   z-index: 1;
 }
 .side-column img {
-  width: 80px;
+  width: 190px;
   height: auto;
   display: block;
+  margin-top: -50px;
 }
 .side-column.left {
   position: absolute;
@@ -112,24 +109,22 @@ body{
   top: 50%;
   right: 40px;
   transform: translateY(-50%);
-}
+  }
 
 /* ===== Scroll hint (seta) ===== */
 .scroll-link{display:inline-block;text-decoration:none}
-.arrow{
-  display:inline-block;
-  width:42px;
-  height:42px;
-  border-left:4px solid var(--accent);
-  border-bottom:4px solid var(--accent);
-  transform:rotate(-45deg);
-  margin-top:8px;
-  animation: bounce 1.6s infinite;
+.scroll-arrow {
+  width: 80px;   /* ajusta o tamanho da sua seta */
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  cursor: pointer;
+  animation: bounce 1.6s infinite; /* mantém o mesmo efeito da seta antiga */
 }
 @keyframes bounce{
-  0%{transform:translateY(0) rotate(-45deg)}
-  50%{transform:translateY(10px) rotate(-45deg)}
-  100%{transform:translateY(0) rotate(-45deg)}
+  0%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+  100%{transform:translateY(0)}
 }
 
 /* ===== Timeline placeholder (segunda tela) ===== */
