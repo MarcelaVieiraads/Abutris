@@ -18,19 +18,27 @@
 </head>
 
 <body>
-  <header class="site-header" role="banner">
-    <div class="container">
-      <img src="assets/images/logo.png" alt="Logotipo Abutris" class="header-logo" />
-    </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#hero" class="nav-left">VOLTAR PARA HOME</a>
+    <a href="about.html" class="nav-right">QUEM SOMOS NÓS?</a>
   </header>
 
   <main>
     <!-- Primeira tela (hero / introdução) -->
     <section class="hero" id="hero" role="region" aria-label="Introdução - Abutris">
-      <div class="hero-inner container">
+      <!-- Coluna esquerda (PUNK) -->
+      <div class="side-column left">
+        <img src="assets/images/punk1.gif" alt="P">
+        <img src="assets/images/punk2.gif" alt="U">
+        <img src="assets/images/punk3.gif" alt="N">
+        <img src="assets/images/punk4.gif" alt="K">
+      </div>
+
+      <!-- Conteúdo central -->
+      <div class="hero-inner">
         <img class="hero-logo" src="assets/images/logo.png" alt="Logotipo Abutris" />
-        <h1 class="hero-title">Abutris</h1>
-        <p class="hero-subtitle">História do Caos</p>
+        <p class="hero-subtitle">HISTÓRIA DO CAOS</p>
 
         <p class="hero-desc">
           Uma linha do tempo interativa sobre a história do punk rock — explore décadas, bandas, imagens e episódios que
@@ -42,9 +50,17 @@
           <span class="sr-only">Descer para a timeline</span>
         </a>
       </div>
+
+      <!-- Coluna direita (ROCK) -->
+      <div class="side-column right">
+        <img src="assets/images/rock1.gif" alt="R">
+        <img src="assets/images/rock2.gif" alt="O">
+        <img src="assets/images/rock3.gif" alt="C">
+        <img src="assets/images/rock4.gif" alt="K">
+      </div>
     </section>
 
-    <!-- Placeholder da segunda tela (timeline) -->
+    <!-- Segunda tela (timeline) -->
     <section id="timeline" class="timeline-section" role="region" aria-label="Linha do tempo">
       <div class="timeline-container">
         <div class="timeline-track" id="timelineTrack">

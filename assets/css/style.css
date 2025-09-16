@@ -23,51 +23,98 @@ body{
   padding:0 20px;
 }
 
-/* header */
-.site-header{
-  position:fixed;
-  top:0; left:0;
-  width:100%;
-  z-index:60;
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
-  padding:10px 0;
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 40px;
+  z-index: 1000;
+  background: transparent;
 }
-.header-logo{height:36px}
+.navbar a {
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-size: 0.9rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navbar a:hover {
+  color: var(--accent);
+}
 
-/* HERO (primeira tela) */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+/* ===== HERO (primeira tela) ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-image: url('../images/home/bg-paper.jpg');
-  background-size:cover;
-  background-position:center;
-  padding:2rem 0;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 80px;
+  position: relative;
 }
 
-.hero-inner{
-  max-width:920px;
-  padding:2rem;
+.hero-inner {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 1;
+
   background: var(--panel);
-  border-radius:8px;
+  padding: 2rem;
+  border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-.hero-logo{width:120px;height:auto;margin:0 auto 0.6rem;display:block}
-.hero-title{
-  font-family: 'Archivo Black', Impact, sans-serif;
-  font-size: clamp(36px, 8vw, 86px);
-  color: var(--accent);
-  margin: 0 0 6px;
-  text-transform:uppercase;
-  letter-spacing:2px;
+.hero-logo {
+  max-width: 280px;
+  margin-bottom: 20px;
 }
-.hero-subtitle{color:var(--muted); margin:0 0 1rem; font-weight:700; text-transform:uppercase}
-.hero-desc{color:var(--muted); margin:0 0 1.4rem; font-size:1.05rem; line-height:1.5}
+.hero-subtitle {
+  font-family: 'Archivo Black', Impact, sans-serif;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.hero-desc {
+  font-size: 1rem;
+  color: #eee;
+  margin: 0 0 1.4rem;
+  line-height: 1.5;
+}
 
-/* Scroll hint (seta) */
+/* Colunas laterais PUNK/ROCK */
+.side-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  z-index: 1;
+}
+.side-column img {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+.side-column.left {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+}
+.side-column.right {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+/* ===== Scroll hint (seta) ===== */
 .scroll-link{display:inline-block;text-decoration:none}
 .arrow{
   display:inline-block;
@@ -85,7 +132,7 @@ body{
   100%{transform:translateY(0) rotate(-45deg)}
 }
 
-/* timeline placeholder (segunda tela) */
+/* ===== Timeline placeholder (segunda tela) ===== */
 .timeline-section{
   min-height:100vh;
   padding:4rem 0;
@@ -105,7 +152,7 @@ body{
 .timeline-placeholder h2{color:var(--accent); margin:0 0 0.5rem}
 .timeline-placeholder p{color:var(--muted); margin:0}
 
-/* acessibilidade - sr-only */
+/* ===== Acessibilidade ===== */
 .sr-only{
   position:absolute!important;
   height:1px; width:1px;
@@ -113,10 +160,17 @@ body{
   white-space:nowrap;
 }
 
-/* responsivo */
+/* ===== Responsivo ===== */
 @media (max-width:720px){
-  .hero-inner{padding:1.2rem}
-  .hero-logo{width:90px}
-  .hero-title{font-size: clamp(28px, 12vw, 56px)}
-  .hero-desc{font-size:0.98rem}
+  .hero { 
+    padding: 40px 20px; 
+    flex-direction: column;
+  }
+  .side-column.left,
+  .side-column.right {
+    display: none; /* esconde PUNK/ROCK no celular */
+  }
+  .hero-logo{width:180px}
+  .hero-subtitle{font-size: 1.2rem}
+  .hero-desc{font-size:0.95rem}
 }
