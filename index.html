@@ -45,7 +45,8 @@
         <p class="hero-subtitle">HISTÓRIA DO CAOS</p>
 
         <p class="hero-desc">
-          Fragmentos de rebeldia, ecos de guitarras e rastros de anarquia. O punk não morreu — ele pulsa em cada um de nós.
+          Fragmentos de rebeldia, ecos de guitarras e rastros de anarquia. O punk não morreu — ele pulsa em cada um de
+          nós.
         </p>
 
         <a href="#timeline" class="scroll-link" id="scrollToTimeline" aria-label="Ir para a linha do tempo">
@@ -72,6 +73,29 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal (popup) -->
+  <div id="timelineModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar modal">
+        <img src="assets/images/icons/close-x.png" alt="Fechar">
+      </button>
+
+      <div class="modal-body">
+        <!-- Lado esquerdo: imagens dinâmicas -->
+        <div class="modal-left" id="modalImages"></div>
+
+        <!-- Lado direito: textos -->
+        <div class="modal-right">
+          <h2 id="modalYear" class="modal-year"></h2>
+          <h3 id="modalTitle" class="modal-title"></h3>
+          <div id="modalDescription" class="modal-desc"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <!-- JS -->
   <script src="assets/js/main.js"></script>

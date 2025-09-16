@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         circle.addEventListener("click", () => {
-          console.log(`Abrir modal para ${decade.year}`);
+          openModal(decade);
         });
 
         const title = document.createElement("div");
