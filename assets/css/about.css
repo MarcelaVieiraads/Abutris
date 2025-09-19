@@ -78,7 +78,7 @@
 
 .member h3 {
   font-family: 'Archivo Black', Impact, sans-serif;
-  color: var(--accent);
+  color: var(--white);
   margin: 0.5rem 0;
 }
 
@@ -106,7 +106,7 @@
 
 .feedback h2 {
   font-family: 'Archivo Black', Impact, sans-serif;
-  color: var(--accent);
+  color: var(--white);
   margin-bottom: 0.3rem;
   font-size: 1.4rem;
 }
