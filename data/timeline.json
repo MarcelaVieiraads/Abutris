@@ -2,7 +2,7 @@
   "decades": [
     {
       "id": "1970",
-      "year": "1970 - A Origem",
+      "year": "1970 - As origens",
       "icon": "assets/images/decades/1970.png",
       "description": [
         "A década de 1970 é reconhecida como o marco inaugural do punk rock, um movimento musical e cultural que surgiu em oposição direta à complexidade crescente do rock progressivo e à mercantilização da música popular da época. Em um contexto social de crise econômica, desemprego elevado e tensões políticas, sobretudo em países como Reino Unido e Estados Unidos, jovens de classes populares passaram a reivindicar formas de expressão mais diretas, rápidas e acessíveis. Nesse cenário, o punk se consolidou como um estilo que rejeitava virtuosismos técnicos e buscava recuperar a simplicidade do rock em sua essência, fazendo da atitude e do discurso contestador seus principais elementos distintivos.",  
@@ -15,11 +15,13 @@
         "Assim, a década de 1970 pode ser entendida como o período de gênese e consolidação do punk rock. Entre a sonoridade crua dos Ramones, a explosão social dos Sex Pistols e The Clash, e a semente lançada no Brasil com Restos de Nada, o movimento estabeleceu-se como uma das expressões mais radicais da cultura juvenil do século XX. A junção entre música, comportamento e estética visual inaugurou uma linguagem cultural que ultrapassaria gerações e se tornaria referência obrigatória nos estudos da história da música e da contracultura."
       ],
       "images": [
-        "assets/images/decades/1970-1.jpg",
-        "assets/images/decades/1970-2.jpg",
-        "assets/images/decades/1970-3.jpg",
-        "assets/images/decades/1970-4.jpg",
-        "assets/images/decades/1970-5.jpg"
+        { "src": "assets/images/modal/1970/IggyPopAndTheStooges.jpg", "caption":"Banda The Stooges"},
+        { "src": "assets/images/modal/1970/CBGBClub.jpg", "caption":"A fachada do CBGB em foto de 2005"},
+        { "src": "assets/images/modal/1970/RocketToRussiaRamones.jpg", "caption":"Capa do álbum Rocket to Russia dos Ramones"},
+        { "src": "assets/images/modal/1970/TheClashAlbum.jpg", "caption":"Capa do álbum de estreia do The Clash"},
+        { "src": "assets/images/modal/1970/RichardHellAndTheVoidoids.jpg", "caption":"Capa do álbum Blank Genaration do Richard Hell and The Voidoids"},
+        { "src": "assets/images/modal/1970/BandaRestosDeNada.jpg", "caption":"Banda brasileira Restos de Nada"},
+        { "src": "assets/images/modal/1970/VivienneWestwood.jpg", "caption":"Vivienne Westwood"}
       ],
       "links": [
         "https://pt.wikipedia.org/wiki/Punk_rock"
@@ -27,7 +29,7 @@
     },
     {
       "id": "1980",
-      "year": 1980,
+      "year": "1980 - A radicalização",
       "icon": "assets/images/decades/1980.png",
       "description":[
         "A década de 1980 representou a consolidação do punk rock em escala mundial, mas também sua fragmentação em diferentes vertentes. Após o impacto inicial dos anos 1970, o gênero passou por um processo de radicalização sonora e ideológica, marcado pela ascensão do hardcore punk nos Estados Unidos e pelo crescimento de subgêneros como o anarcho-punk e o street punk no Reino Unido. Essa diversificação transformou o punk em uma rede cultural mais ampla, fortalecida pela ética do do it yourself (DIY) e pela emergência de selos independentes que garantiram a autonomia de produção e circulação musical.",
@@ -39,13 +41,18 @@
         "Em síntese, a década de 1980 foi responsável pela consolidação do punk como um fenômeno global, diverso e multifacetado. Enquanto nos Estados Unidos o hardcore e o straight edge criaram novas formas de organização e som, no Reino Unido o anarcho-punk e o street punk aprofundaram a radicalidade estética e política. No Brasil, a cena paulista tornou-se um exemplo mundial de vitalidade e resistência cultural, articulando música, política e comunidade. A moda e a estética punk, por sua vez, solidificaram-se como símbolos duradouros de contestação e identidade, perpetuando o legado de um movimento que, mesmo em fragmentação, manteve-se coerente em sua essência rebelde."
       ],
       "images": [
-        "assets/images/decades/1980-1.jpg"
+        { "src": "assets/images/modal/1980/BlackFlagDamaged.jpg", "caption":"Capa do álbum Damaged do Black Flag"},
+        { "src": "assets/images/modal/1980/CircleJerksBand.jpg", "caption":"Banda Circle Jerks"},
+        { "src": "assets/images/modal/1980/CrassVocalist.jpg", "caption":"Steve Ignorant, vocalista da banda Crass"},
+        { "src": "assets/images/modal/1980/CrucificadosPeloSistemaRatosDePorao.jpg", "caption":"Capa do álbum Crucificados pelo Sistema do Ratos de Porão"},
+        { "src": "assets/images/modal/1980/ComecoDoFimDoMundoFestival.jpg", "caption":"Imagem do Festival Começo do Fim do Mundo"},
+        { "src": "assets/images/modal/1980/StraightEdge.jpg", "caption":"Membros do movimento straight edge escolhem demonstrar as causas que apoiam."}
       ],
       "links": []
     },
     {
       "id": "1990",
-      "year": 1990,
+      "year": "1990 - O mainstream",
       "icon": "assets/images/decades/1990.png",
       "description":[
         "A década de 1990 foi marcada por um processo de renovação e popularização do punk rock, especialmente com a ascensão do pop punk e da difusão massiva do gênero pela mídia internacional. Após a radicalização hardcore dos anos 1980, o punk passou a dialogar mais diretamente com o mercado fonográfico, sem perder totalmente suas raízes contestatórias. Essa fase foi decisiva para inserir o punk em rádios, canais televisivos e grandes gravadoras, alcançando públicos jovens em escala global e redefinindo o lugar do gênero dentro da cultura popular.",
@@ -56,12 +63,18 @@
         "A moda punk nos anos 1990 refletiu esse processo de popularização e transformação. Se nos anos 1980 a estética era mais radical e visualmente chocante, a década seguinte assistiu a uma suavização e integração com a cultura do skate e do streetwear. O uso de tênis como Vans e Converse, calças largas, camisetas de bandas e bonés tornou-se comum entre jovens que se identificavam com o universo do punk e do hardcore melódico. Embora elementos tradicionais, como jaquetas de couro e patches, não tenham desaparecido, a estética se tornou mais acessível e menos vinculada ao choque visual, refletindo a absorção do punk pela cultura jovem de massa.",
         "Portanto, os anos 1990 podem ser entendidos como uma fase de transição, em que o punk se firmou como parte da cultura popular global. Se, por um lado, bandas como Green Day e The Offspring levaram o gênero a milhões de ouvintes, por outro, grupos independentes e underground mantiveram viva a ética do do it yourself. No Brasil, a cena mostrou força e diversidade, conectando-se cada vez mais com circuitos internacionais. A moda, por sua vez, acompanhou o processo de integração cultural, tornando-se menos contestatória e mais incorporada ao cotidiano juvenil. Em síntese, a década de 1990 demonstra como o punk conseguiu expandir suas fronteiras sem perder completamente o vínculo com sua essência crítica e comunitária. Nesse mesmo período, a cena latino-americana também apresentou vitalidade, com bandas argentinas como Fun People e 2 Minutos obtendo destaque regional e reforçando o caráter transnacional do punk nos anos 1990."
       ],
-      "images": [],
+      "images": [
+        { "src": "assets/images/modal/1990/GreenDayBand.jpg", "caption":"Banda Green Day"},
+        { "src": "assets/images/modal/1990/SmashOffspring.jpg", "caption":"Capa do álbum Smash do The Offspring"},
+        { "src": "assets/images/modal/1990/FirstWarpedTour.jpg", "caption":"Pôster do primeiro ano do Warped Tour em 1995"},
+        { "src": "assets/images/modal/1990/DeadFishBand.jpg", "caption":"Banda brasileira Dead Fish"},
+        { "src": "assets/images/modal/1990/StreetwearYoungGirl.jpg", "caption":"Jovem utilizando roupas no estilo streetwear"}
+      ],
       "links": []
     },
     {
       "id": "2000",
-      "year": 2000,
+      "year": "2000 - A fragmentação",
       "icon": "assets/images/decades/2000.png",
       "description":[
         "A década de 2000 representou um momento de transformação e fragmentação para o punk rock, consolidando sua presença na cultura popular e, ao mesmo tempo, abrindo espaço para novas fusões sonoras e estéticas. Se nos anos 1990 o gênero havia alcançado grande popularidade com o pop punk, os anos 2000 ampliaram esse processo, trazendo uma nova geração de bandas que misturaram o punk com influências do emo, do hardcore melódico e até do metal alternativo. Nesse período, o punk consolidou-se como parte integrante do imaginário juvenil global, encontrando espaço em grandes festivais, mídias de massa e nas então emergentes plataformas digitais.",
@@ -72,27 +85,40 @@
         "A moda punk nesse período refletiu fortemente a influência do movimento emo e da estética juvenil dos anos 2000. O uso de calças justas (skinny jeans), camisetas estampadas, moletons com capuz, piercings e cabelos tingidos em cores escuras ou vibrantes tornou-se comum entre jovens identificados com a cena. Essa estética, embora absorvida pela indústria da moda e pela mídia, continuou a ser expressão de pertencimento e identidade, ainda que mais estilizada e menos contestatória que nas décadas anteriores.",
         "Em síntese, a década de 2000 demonstrou a capacidade de adaptação do punk rock às novas condições da indústria musical e da cultura digital. A explosão do pop punk, a aproximação com o emo e a difusão pela internet permitiram ao gênero alcançar um público ainda mais amplo, ao mesmo tempo em que garantiram a sobrevivência de sua vertente independente. No Brasil, a cena mostrou vitalidade e diversidade, articulando tradição e inovação. A moda, por sua vez, espelhou as transformações do período, tornando-se parte do cotidiano de milhões de jovens ao redor do mundo."
       ],
-      "images": [],
+      "images": [
+        { "src": "assets/images/modal/2000/GoodCharlotteBand.jpg", "caption":"Banda Good Charlotte"},
+        { "src": "assets/images/modal/2000/AllKillerNoFillerSum41.jpg", "caption":"Capa do álbum All Killer No Filler do Sum  41"},
+        { "src": "assets/images/modal/2000/MyChemicalRomanceBand.jpg", "caption":"Banda My Chemical Romance"},
+        { "src": "assets/images/modal/2000/ColeraBand.jpg", "caption":"Banda brasileira Cólera"},
+        { "src": "assets/images/modal/2000/PopPunkFashion.jpg", "caption":"Mulher utilizando o estilo Pop Punk"}        
+      ],
       "links": []
     },
     {
       "id": "2010",
-      "year": 2010,
+      "year": "2010 - A renovação",
       "icon": "assets/images/decades/2010.png",
       "description":[
         "A década de 2010 foi marcada por um duplo movimento no interior do punk rock: de um lado, a valorização da memória histórica do gênero, com relançamentos, documentários e o fortalecimento do colecionismo em vinil; de outro, a emergência de novas bandas que buscaram revitalizar a estética punk, ora recuperando elementos tradicionais, ora hibridizando o som com outras vertentes contemporâneas, como o indie rock e o pós-hardcore. Essa tensão entre passado e futuro caracterizou o período, evidenciando como o punk, mais de três décadas após sua origem, permanecia vivo e em constante transformação.",
-        "No cenário internacional, o revival do pop punk ganhou destaque com o surgimento de bandas como The Story So Far, Neck Deep e State Champs, que resgataram o espírito juvenil dos anos 1990 e atualizaram a sonoridade para novas audiências. Paralelamente, grupos como PUP (Canadá) e Against Me! (EUA) exploraram abordagens mais politizadas e criativas, conquistando reconhecimento crítico e público. Outra tendência importante foi a ascensão de bandas associadas ao chamado pós-punk contemporâneo, como IDLES e Fontaines D.C., que, embora não se enquadrem de maneira estrita no punk rock, compartilham da mesma energia contestatória e da estética crua que caracteriza o movimento. Essa abertura para fusões demonstrou a capacidade do punk de dialogar com linguagens emergentes sem perder sua essência contestatória.",
+        "No cenário internacional, o revival do pop punk ganhou destaque com o surgimento de bandas como The Story So Far, Neck Deep e State Champs, que resgataram o espírito juvenil dos anos 1990 e atualizaram a sonoridade para novas audiências. Paralelamente, grupos como PUP (Canadá) e Against Me! (EUA) exploraram abordagens mais politizadas e criativas, conquistando reconhecimento crítico e público. Outra tendência importante foi a ascensão de bandas associadas ao chamado pós-punk contemporâneo, como IDLES e Fontaines D.C. , que, embora não se enquadrem de maneira estrita no punk rock, compartilham da mesma energia contestatória e da estética crua que caracteriza o movimento. Essa abertura para fusões demonstrou a capacidade do punk de dialogar com linguagens emergentes sem perder sua essência contestatória.",
         "No Brasil, a década de 2010 foi marcada pela manutenção da cena punk em espaços alternativos e pela atuação de coletivos culturais que mantiveram viva a tradição do do it yourself. Pequenas casas de shows, centros culturais independentes e ocupações urbanas tornaram-se pontos de encontro e resistência, permitindo que novas bandas se articulassem e dialogassem com as gerações anteriores. Bandas veteranas como Ratos de Porão e Inocentes continuaram em atividade, enquanto grupos mais recentes mantiveram a vitalidade do movimento, utilizando as redes sociais, o Bandcamp e o YouTube como principais canais de divulgação. O punk brasileiro nos anos 2010 consolidou-se, assim, como uma cena resiliente, que soube adaptar-se às novas tecnologias sem abrir mão de sua postura crítica frente às desigualdades sociais e políticas.",
         "O impacto cultural do punk durante essa década esteve fortemente ligado às discussões sociais e identitárias que marcaram o período. O movimento foi incorporado como linguagem de protesto em pautas feministas, LGBTQIA+ e antirracistas, ampliando sua relevância como plataforma de contestação. Além disso, o punk passou a ocupar espaço em festivais e coletâneas que buscavam valorizar a diversidade, com maior protagonismo de mulheres e pessoas de diferentes origens dentro da cena. Essa ampliação reforçou o caráter inclusivo do punk, reafirmando sua vocação de resistência cultural e política.",
         "A moda punk nos anos 2010 refletiu tanto o retorno a elementos clássicos quanto a incorporação de novas referências. O uso de jaquetas de couro, patches, camisetas de bandas e coturnos permaneceu como símbolos tradicionais, mas foi complementado por elementos do streetwear e da estética indie, resultando em um visual híbrido. A estética punk, portanto, deixou de ser apenas um marcador de choque ou transgressão e passou a funcionar também como referência de estilo em circuitos da moda alternativa e mesmo em coleções comerciais, ainda que preservando sua ligação com a identidade de resistência nos meios underground.",
         "Em síntese, a década de 2010 foi um período de renovação e expansão da cena punk rock, marcada tanto pelo resgate de suas tradições quanto pela abertura a novas experimentações. Bandas internacionais revitalizaram o gênero para novas gerações, enquanto no Brasil a cena permaneceu ativa em espaços autônomos e coletivos culturais. A relevância social do punk foi reforçada pelas pautas políticas e identitárias do período, e a moda seguiu como símbolo de contestação, ainda que integrada a novos estilos. A vitalidade demonstrada nesse período atesta a capacidade do punk de se reinventar continuamente, mantendo-se atual e significativo em diferentes contextos históricos."
       ],
-      "images": [],
+      "images": [
+        { "src": "assets/images/modal/2010/TheStorySoFarBand.jpg", "caption":"Banda The Story So Far"},
+        { "src": "assets/images/modal/2010/NeckDeepBand.jpg", "caption":"Banda Neck Deep"},
+        { "src": "assets/images/modal/2010/AgainstMeBand.jpg", "caption":"Banda Against Me!"},
+        { "src": "assets/images/modal/2010/PunkRockGirl.jpg", "caption":"Mulher de cabelo vermelho no estilo Punk Rock"},
+        { "src": "assets/images/modal/2010/IDLESBand.jpg", "caption":"Banda IDLES"},
+        { "src": "assets/images/modal/2010/PUPBand.jpg", "caption":"Banda PUP"}
+      ],
       "links": []
     },
     {
       "id": "atual",
-      "year": "Presente",
+      "year": "Presente - A atualidade",
       "icon": "assets/images/decades/Presente.png",
       "description":[
         "O período entre 2020 e 2025 mostra que o punk rock permanece como um movimento cultural ativo, ainda que reformulado em função das transformações sociais, políticas e tecnológicas do século XXI. Longe de ser apenas uma expressão nostálgica, o punk atual se caracteriza pela diversidade estética e pela pluralidade de vozes, combinando tradições herdadas das décadas anteriores com novas linguagens sonoras, visuais e políticas. Esse processo reflete tanto a capacidade do punk de se reinventar quanto a permanência de sua função contestatória em tempos de crise global.",
@@ -103,7 +129,14 @@
         "No campo da moda, observa-se um duplo movimento. Por um lado, a estética punk clássica — jaquetas de couro, coturnos, cabelos coloridos, patches e roupas rasgadas — continua a ser cultivada em circuitos underground, reafirmando o ethos da contracultura. Por outro lado, o punk passou a ser apropriado de maneira mais ampla pela indústria da moda, sendo incorporado em coleções de grifes e campanhas publicitárias. Essa ambivalência reforça a capacidade do punk de permanecer visível e relevante, ainda que, em alguns contextos, sua estética seja esvaziada de seu conteúdo político original.",
         "Em síntese, o punk rock entre 2020 e 2025 evidencia a força de um movimento que, mesmo após quase meio século de existência, continua a se reinventar. A diversidade de bandas, a pluralidade de identidades representadas, o uso intensivo das plataformas digitais e a permanência da estética contestatória demonstram que o punk permanece atual e significativo. No Brasil e no mundo, o gênero segue como linguagem de resistência, ao mesmo tempo em que dialoga com novos públicos e contextos culturais, confirmando sua relevância como uma das expressões mais duradouras da música e da contracultura contemporânea."
       ],
-      "images": [],
+      "images": [
+        { "src": "assets/images/modal/Presente/FontainesDCBand.jpg", "caption":"Banda Fontaines D.C."},
+        { "src": "assets/images/modal/Presente/AmylAndTheSniffersBand.jpg", "caption":"Banda Amyl And The Sniffers"},
+        { "src": "assets/images/modal/Presente/TurnstileBand.jpg", "caption":"Banda Turnstile"},
+        { "src": "assets/images/modal/Presente/YoungPunkers.jpg", "caption":"Jovens punkers"},
+        { "src": "assets/images/modal/Presente/MeetMeAtTheAltarBand.jpg", "caption":"Banda Meet Me At The Altar"},
+        { "src": "assets/images/modal/Presente/PinkshiftBand.jpg", "caption":"Banda Pinkshift"}
+      ],
       "links": []
     }
   ]
