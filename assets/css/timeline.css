@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: flex-start;
 
-  background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(17,17,17,0.8) 100%),
-              url('../images/timeline/backgroundpunk.png') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 0%, rgba(17, 17, 17, 0.8) 100%),
+    url('../images/timeline/backgroundpunk.png') center/cover no-repeat;
 }
 
 
@@ -31,10 +31,11 @@
 /* trilho da timeline */
 .timeline-track {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 14vw;
   position: relative;
-  padding: 60px 0; 
+  padding: 60px 0;
 }
 
 .timeline-track::before {
@@ -43,12 +44,14 @@
   top: 50%;
   left: 0;
   right: 0;
-  height: 450px; /* altura do rabisco */
+  height: 450px;
+  /* altura do rabisco */
   transform: translateY(-50%);
-  
+
   background: url('../images/timeline/LinhaTimelineVermelha.png ') no-repeat center;
-  background-size: 90% 100%; /* estica a largura E altura */
-  
+  background-size: 90% 100%;
+  /* estica a largura E altura */
+
   opacity: 0.9;
   z-index: 0;
 }
@@ -78,6 +81,7 @@
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+
 .timeline-circle:hover {
   transform: scale(1.08) rotate(-5deg);
 }
@@ -90,10 +94,12 @@
   border: 2px solid var(--accent);
   border-radius: 50%;
 }
+
 .timeline-circle::before {
   width: 160px;
   height: 160px;
 }
+
 .timeline-circle::after {
   width: 180px;
   height: 180px;
@@ -105,6 +111,7 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 .timeline-circle-img:hover {
   transform: scale(1.1) rotate(-3deg);
 }
@@ -116,6 +123,7 @@
   pointer-events: none;
   z-index: 0;
 }
+
 .timeline-decor img {
   max-width: 180px;
   height: auto;
@@ -123,13 +131,74 @@
 }
 
 /*imagens parte de cima da timeline*/
-.decor-1 { top: 15%; left: 25%; }
-.decor-2 { top: 20%; left: 83%; }
-.decor-3 { top: 20%; left: 142%; }
-.decor-4 { bottom: 18%; right: -75%; }
+.decor-1 {
+  top: 15%;
+  left: 25%;
+}
+
+.decor-2 {
+  top: 20%;
+  left: 83%;
+}
+
+.decor-3 {
+  top: 20%;
+  left: 142%;
+}
+
+.decor-4 {
+  bottom: 18%;
+  right: -75%;
+}
 
 /* imagens parte de baixo da timeline*/
-.decor-5 { bottom: 15%; right: 35%; }
-.decor-6 { bottom: 20%; right: -24%; }
-.decor-7 { bottom: 15%; right: 80%; }
+.decor-5 {
+  bottom: 15%;
+  right: 35%;
+}
+
+.decor-6 {
+  bottom: 20%;
+  right: -24%;
+}
+
+.decor-7 {
+  bottom: 15%;
+  right: 80%;
+}
+
+/* Controles das setas */
+.timeline-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  gap: 60px;
+  z-index: 200;
+}
+
+.timeline-arrow {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 5px black);
+}
+
+.timeline-arrow:hover {
+  transform: scale(1.2);
+}
+
+
+/* caso a seta seja pra baixo */
+.timeline-arrow.left {
+  transform: rotate(90deg);
+  /* aponta para a esquerda */
+}
+
+.timeline-arrow.right {
+  transform: rotate(270deg);
+  /* aponta para a direita */
+}
 
