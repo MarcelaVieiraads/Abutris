@@ -217,8 +217,8 @@
 }
 
 .playlist-disc {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
   animation: spinDisc 15s linear infinite;
   border: none;
@@ -232,7 +232,7 @@
 .playlist-text {
   font-family: 'Special Elite', monospace;
   color: var(--bg);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   opacity: 0.9;
   text-align: right;
   font-weight: bold;

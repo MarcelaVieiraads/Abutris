@@ -1,7 +1,8 @@
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 5; left: 0;
+  top: 5;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -9,15 +10,20 @@
   z-index: 1000;
   background: transparent;
 }
+
 .navbar a {
   font-family: 'Special Elite', Impact, sans-serif;
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--white);
   text-decoration: none;
   transition: color 0.2s;
+  background-color: var(--accent);
+  border-radius: 10px;
+  padding: 5px;
 }
+
 .navbar a:hover {
-  color: var(--white);
+  color: var(--bg);
 }
 
 .about-section {
@@ -34,11 +40,11 @@
 .about-container {
   max-width: 1000px;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .about-logo {
@@ -58,7 +64,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: -20rem;
   margin-bottom: 3rem;
 }
 
@@ -82,6 +88,7 @@
 .member p {
   margin: 0.2rem 0;
   color: var(--muted);
+  font-size: 20px;
 }
 
 .member a {
@@ -94,7 +101,7 @@
 }
 
 .feedback {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-radius: 8px;
   max-width: 500px;
@@ -125,6 +132,7 @@
   transition: transform 0.2s ease;
   font-size: 0.95rem;
 }
+
 .feedback-btn:hover {
   transform: scale(1.05);
   background: #b71c1c;
