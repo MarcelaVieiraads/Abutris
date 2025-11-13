@@ -118,8 +118,6 @@ function openModal(decade) {
     modalRight.appendChild(playlistSection);
   }
 
-
-
   // Mostra modal com efeito suave
   modal.style.display = "flex";
   setTimeout(() => modal.classList.add("show"), 20);
@@ -131,7 +129,6 @@ function openModal(decade) {
   modal.setAttribute("tabindex", "-1");
   modal.focus();
 }
-
 
 
 // ===============================
@@ -167,18 +164,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target.classList.contains("modal-content")) return;
     });
 
-    // 🔹 Scroll suave com setas ↑ ↓
+    // 🔹 Scroll suave e bloqueio de setas horizontais
     modal.addEventListener("keydown", (e) => {
       const scrollable = modal.querySelector(".modal-content");
-      const scrollSpeed = 200; // ajuste aqui a velocidade
+      const scrollSpeed = 200;
       if (!scrollable) return;
 
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        scrollable.scrollBy({ top: scrollSpeed, behavior: "smooth" });
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        scrollable.scrollBy({ top: -scrollSpeed, behavior: "smooth" });
+      switch (e.key) {
+        case "ArrowDown":
+          e.preventDefault();
+          scrollable.scrollBy({ top: scrollSpeed, behavior: "smooth" });
+          break;
+
+        case "ArrowUp":
+          e.preventDefault();
+          scrollable.scrollBy({ top: -scrollSpeed, behavior: "smooth" });
+          break;
+
+        case "ArrowLeft":
+        case "ArrowRight":
+          // bloqueia a timeline de se mover
+          e.preventDefault();
+          e.stopPropagation();
+          break;
       }
     });
   }
