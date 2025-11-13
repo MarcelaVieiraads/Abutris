@@ -131,8 +131,35 @@ function initNavigation() {
   leftArrow.addEventListener("click", () => scrollToIndex(currentIndex - 1));
   rightArrow.addEventListener("click", () => scrollToIndex(currentIndex + 1));
 
-  // teclado
+  /* ===========================================
+      🔥 TECLADO → só funciona se timeline 100% visível
+     =========================================== */
   document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("timelineModal");
+    const modalAberto = modal && modal.style.display === "flex";
+
+    // Bloqueia teclas se modal estiver aberto
+    if (modalAberto && (e.key === "ArrowLeft" || e.key === "ArrowRight")) {
+      e.preventDefault();
+      return;
+    }
+
+    const timeline = document.getElementById("timeline");
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const timelineTotalmenteVisivel =
+      rect.top >= 0 && rect.bottom <= windowHeight;
+
+    // timeline NÃO está totalmente visível → bloquear setas
+    if (!timelineTotalmenteVisivel) {
+      if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+        e.preventDefault();
+        return;
+      }
+    }
+
+    // timeline 100% visível → permitir navegação
     if (e.key === "ArrowRight") {
       e.preventDefault();
       scrollToIndex(currentIndex + 1);
