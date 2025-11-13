@@ -5,7 +5,7 @@
       "year": "1970 - As origens",
       "icon": "assets/images/decades/1970.png",
       "description": [
-        "A década de 1970 é reconhecida como o marco inaugural do punk rock, um movimento musical e cultural que surgiu em oposição direta à complexidade crescente do rock progressivo e à mercantilização da música popular da época. Em um contexto social de crise econômica, desemprego elevado e tensões políticas, sobretudo em países como Reino Unido e Estados Unidos, jovens de classes populares passaram a reivindicar formas de expressão mais diretas, rápidas e acessíveis. Nesse cenário, o punk se consolidou como um estilo que rejeitava virtuosismos técnicos e buscava recuperar a simplicidade do rock em sua essência, fazendo da atitude e do discurso contestador seus principais elementos distintivos.",  
+        "A década de 1970 é reconhecida como o marco inaugural do punk rock, um movimento musical e cultural que surgiu em oposição direta à complexidade crescente do rock progressivo e à mercantilização da música popular da época. Em um contexto social de crise econômica, desemprego elevado e tensões políticas, sobretudo em países como Reino Unido e Estados Unidos, jovens de classes populares passaram a reivindicar formas de expressão mais diretas, rápidas e acessíveis. Nesse cenário, o punk se consolidou como um estilo que rejeitava virtuosismos técnicos e buscava recuperar a simplicidade do rock em sua essência, fazendo da atitude e do discurso contestador seus principais elementos distintivos.",
         "Antes mesmo da consolidação do termo “punk”, algumas bandas precursoras, frequentemente denominadas proto-punk, já experimentavam sonoridades e comportamentos que influenciariam diretamente o movimento. Grupos como The Stooges, liderado por Iggy Pop, MC5, Velvet Underground e New York Dolls, no final da década de 1960 e início dos anos 1970, estabeleceram uma estética baseada em agressividade sonora, lirismo niilista e performances provocativas. Esses artistas, embora não classificados formalmente como punk, forneceram os alicerces sonoros e visuais que seriam apropriados pela cena posterior.",
         "Nos Estados Unidos, a cidade de Nova Iorque destacou-se como berço de uma cena embrionária, concentrada em casas como o lendário CBGB, que serviu de palco para bandas fundamentais. Entre elas, Ramones, Television e Patti Smith despontaram como símbolos de uma nova forma de fazer música, marcada por composições curtas, riffs repetitivos e letras que mesclavam ironia, alienação e crítica social. Também merece destaque Richard Hell, inicialmente integrante do Television e posteriormente líder do Richard Hell and the Voidoids. Seu álbum Blank Generation (1977) é considerado um marco fundamental, tanto pela sonoridade crua quanto pela construção de uma estética visual baseada em roupas rasgadas e atitude niilista, que influenciaria diretamente a cena britânica. O álbum homônimo Ramones (1976) é frequentemente apontado como um divisor de águas, estabelecendo a estética definitiva do punk.",
         "Paralelamente, no Reino Unido, o punk emergiu em meio a uma crise social e econômica profunda. O desemprego juvenil, as greves trabalhistas e o desencanto com a política criaram o ambiente perfeito para a explosão de uma cena musical agressiva e contestatória. Bandas como Sex Pistols e The Clash foram protagonistas dessa fase, conferindo ao punk britânico um caráter ainda mais político. O álbum Never Mind the Bollocks, Here’s the Sex Pistols (1977) tornou-se ícone de rebeldia e censura, enquanto The Clash (1977) incorporava elementos de crítica social e experimentação musical, mesclando punk com reggae e dub. Ainda no Reino Unido, grupos como The Damned e Buzzcocks contribuíram para diversificar a cena, inserindo elementos de humor, melodia e inovação lírica.",
@@ -15,23 +15,45 @@
         "Assim, a década de 1970 pode ser entendida como o período de gênese e consolidação do punk rock. Entre a sonoridade crua dos Ramones, a explosão social dos Sex Pistols e The Clash, e a semente lançada no Brasil com Restos de Nada, o movimento estabeleceu-se como uma das expressões mais radicais da cultura juvenil do século XX. A junção entre música, comportamento e estética visual inaugurou uma linguagem cultural que ultrapassaria gerações e se tornaria referência obrigatória nos estudos da história da música e da contracultura."
       ],
       "images": [
-        { "src": "assets/images/modal/1970/IggyPopAndTheStooges.jpg", "caption":"Banda The Stooges"},
-        { "src": "assets/images/modal/1970/CBGBClub.jpg", "caption":"A fachada do CBGB em foto de 2005"},
-        { "src": "assets/images/modal/1970/RocketToRussiaRamones.jpg", "caption":"Capa do álbum Rocket to Russia dos Ramones"},
-        { "src": "assets/images/modal/1970/TheClashAlbum.jpg", "caption":"Capa do álbum de estreia do The Clash"},
-        { "src": "assets/images/modal/1970/RichardHellAndTheVoidoids.jpg", "caption":"Capa do álbum Blank Genaration do Richard Hell and The Voidoids"},
-        { "src": "assets/images/modal/1970/BandaRestosDeNada.jpg", "caption":"Banda brasileira Restos de Nada"},
-        { "src": "assets/images/modal/1970/VivienneWestwood.jpg", "caption":"Vivienne Westwood"}
+        {
+          "src": "assets/images/modal/1970/IggyPopAndTheStooges.jpg",
+          "caption": "Banda The Stooges"
+        },
+        {
+          "src": "assets/images/modal/1970/CBGBClub.jpg",
+          "caption": "A fachada do CBGB em foto de 2005"
+        },
+        {
+          "src": "assets/images/modal/1970/RocketToRussiaRamones.jpg",
+          "caption": "Capa do álbum Rocket to Russia dos Ramones"
+        },
+        {
+          "src": "assets/images/modal/1970/TheClashAlbum.jpg",
+          "caption": "Capa do álbum de estreia do The Clash"
+        },
+        {
+          "src": "assets/images/modal/1970/RichardHellAndTheVoidoids.jpg",
+          "caption": "Capa do álbum Blank Genaration do Richard Hell and The Voidoids"
+        },
+        {
+          "src": "assets/images/modal/1970/BandaRestosDeNada.jpg",
+          "caption": "Banda brasileira Restos de Nada"
+        },
+        {
+          "src": "assets/images/modal/1970/VivienneWestwood.jpg",
+          "caption": "Vivienne Westwood"
+        }
       ],
-      "links": [
-        "https://pt.wikipedia.org/wiki/Punk_rock"
-      ]
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     },
     {
       "id": "1980",
       "year": "1980 - A radicalização",
       "icon": "assets/images/decades/1980.png",
-      "description":[
+      "description": [
         "A década de 1980 representou a consolidação do punk rock em escala mundial, mas também sua fragmentação em diferentes vertentes. Após o impacto inicial dos anos 1970, o gênero passou por um processo de radicalização sonora e ideológica, marcado pela ascensão do hardcore punk nos Estados Unidos e pelo crescimento de subgêneros como o anarcho-punk e o street punk no Reino Unido. Essa diversificação transformou o punk em uma rede cultural mais ampla, fortalecida pela ética do do it yourself (DIY) e pela emergência de selos independentes que garantiram a autonomia de produção e circulação musical.",
         "Nos Estados Unidos, o punk evoluiu para formas mais rápidas, agressivas e intensas, que ficaram conhecidas como hardcore. A Califórnia tornou-se um dos principais polos dessa transformação, com bandas como Black Flag e Circle Jerks liderando a cena. O disco Damaged (1981), do Black Flag, é considerado um dos registros fundamentais do gênero, estabelecendo o tom de raiva e visceralidade que caracterizaria o hardcore. Em Washington D.C., formou-se outra vertente igualmente influente, impulsionada pelo selo independente Dischord Records, criado por Ian MacKaye e Jeff Nelson, membros do Minor Threat. Essa banda, além de consolidar a estética hardcore, foi responsável pela criação da filosofia straight edge, que pregava abstinência de álcool, drogas e comportamentos autodestrutivos. No mesmo período, o Bad Brains revolucionava a cena ao misturar a energia punk com influências de reggae e virtuosismo instrumental, enquanto o Dead Kennedys, com discos como Fresh Fruit for Rotting Vegetables (1980), estabelecia uma crítica social e política ácida, satirizando o conservadorismo norte-americano.",
         "No Reino Unido, o punk dos anos 1980 adquiriu um caráter ainda mais contestador e radicalizado. Bandas como Crass desenvolveram o anarcho-punk, que associava o discurso anarquista à prática de vida comunitária e à produção artística autônoma. Essa vertente destacou-se pela ênfase no conteúdo político das letras e pela recusa a qualquer forma de comercialização. Paralelamente, grupos como GBH e The Exploited desenvolveram o chamado street punk ou UK82, marcado por letras diretas, refrões agressivos e uma estética de rua que dialogava com a juventude trabalhadora. Essa fase também foi fundamental para a consolidação de estilos visuais mais radicais, como os cabelos espetados e coloridos, os coletes cheios de patches e os coturnos reforçados, símbolos que até hoje se associam ao imaginário punk.",
@@ -41,20 +63,41 @@
         "Em síntese, a década de 1980 foi responsável pela consolidação do punk como um fenômeno global, diverso e multifacetado. Enquanto nos Estados Unidos o hardcore e o straight edge criaram novas formas de organização e som, no Reino Unido o anarcho-punk e o street punk aprofundaram a radicalidade estética e política. No Brasil, a cena paulista tornou-se um exemplo mundial de vitalidade e resistência cultural, articulando música, política e comunidade. A moda e a estética punk, por sua vez, solidificaram-se como símbolos duradouros de contestação e identidade, perpetuando o legado de um movimento que, mesmo em fragmentação, manteve-se coerente em sua essência rebelde."
       ],
       "images": [
-        { "src": "assets/images/modal/1980/BlackFlagDamaged.jpg", "caption":"Capa do álbum Damaged do Black Flag"},
-        { "src": "assets/images/modal/1980/CircleJerksBand.jpg", "caption":"Banda Circle Jerks"},
-        { "src": "assets/images/modal/1980/CrassVocalist.jpg", "caption":"Steve Ignorant, vocalista da banda Crass"},
-        { "src": "assets/images/modal/1980/CrucificadosPeloSistemaRatosDePorao.jpg", "caption":"Capa do álbum Crucificados pelo Sistema do Ratos de Porão"},
-        { "src": "assets/images/modal/1980/ComecoDoFimDoMundoFestival.jpg", "caption":"Imagem do Festival Começo do Fim do Mundo"},
-        { "src": "assets/images/modal/1980/StraightEdge.jpg", "caption":"Membros do movimento straight edge escolhem demonstrar as causas que apoiam."}
+        {
+          "src": "assets/images/modal/1980/BlackFlagDamaged.jpg",
+          "caption": "Capa do álbum Damaged do Black Flag"
+        },
+        {
+          "src": "assets/images/modal/1980/CircleJerksBand.jpg",
+          "caption": "Banda Circle Jerks"
+        },
+        {
+          "src": "assets/images/modal/1980/CrassVocalist.jpg",
+          "caption": "Steve Ignorant, vocalista da banda Crass"
+        },
+        {
+          "src": "assets/images/modal/1980/CrucificadosPeloSistemaRatosDePorao.jpg",
+          "caption": "Capa do álbum Crucificados pelo Sistema do Ratos de Porão"
+        },
+        {
+          "src": "assets/images/modal/1980/ComecoDoFimDoMundoFestival.jpg",
+          "caption": "Imagem do Festival Começo do Fim do Mundo"
+        },
+        {
+          "src": "assets/images/modal/1980/StraightEdge.jpg",
+          "caption": "Membros do movimento straight edge escolhem demonstrar as causas que apoiam."
+        }
       ],
-      "links": []
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     },
     {
       "id": "1990",
       "year": "1990 - O mainstream",
       "icon": "assets/images/decades/1990.png",
-      "description":[
+      "description": [
         "A década de 1990 foi marcada por um processo de renovação e popularização do punk rock, especialmente com a ascensão do pop punk e da difusão massiva do gênero pela mídia internacional. Após a radicalização hardcore dos anos 1980, o punk passou a dialogar mais diretamente com o mercado fonográfico, sem perder totalmente suas raízes contestatórias. Essa fase foi decisiva para inserir o punk em rádios, canais televisivos e grandes gravadoras, alcançando públicos jovens em escala global e redefinindo o lugar do gênero dentro da cultura popular.",
         "Nos Estados Unidos, o surgimento e consolidação de bandas como Green Day e The Offspring foram marcos desse período. O álbum Dookie (1994), do Green Day, lançado pela Reprise Records, vendeu milhões de cópias e tornou-se símbolo da explosão do pop punk, com faixas que misturavam energia crua e refrões acessíveis. No mesmo ano, o disco Smash, do The Offspring, alcançou grande sucesso, tornando-se um dos álbuns independentes mais vendidos da história antes de a banda assinar com uma grande gravadora. Outra banda de destaque foi o Rancid, cuja obra …And Out Come the Wolves (1995) resgatou elementos do punk setentista e da cena ska, unindo tradição e modernidade. Além dessas, o NOFX e o Bad Religion consolidaram suas trajetórias, garantindo a expansão do punk melódico, enquanto o festival Warped Tour, criado em 1995, se tornava espaço privilegiado para a difusão do gênero e de suas vertentes. Outra banda que se destacou internacionalmente foi o Blink-182, cujo álbum Enema of the State (1999) popularizou ainda mais o pop punk com canções bem-humoradas e melodias acessíveis. Na Europa, grupos como o sueco Millencolin também ajudaram a difundir o punk melódico, consolidando a relevância global dessa vertente durante a década.",
         "No Reino Unido, ainda que a cena não tenha alcançado o mesmo impacto comercial dos Estados Unidos, bandas como The Wildhearts e Snuff mantiveram a vitalidade local. Além disso, o punk britânico dialogou intensamente com outras expressões musicais, especialmente com o indie rock e o britpop, mostrando que a influência do movimento permanecia mesmo em contextos híbridos.",
@@ -64,19 +107,37 @@
         "Portanto, os anos 1990 podem ser entendidos como uma fase de transição, em que o punk se firmou como parte da cultura popular global. Se, por um lado, bandas como Green Day e The Offspring levaram o gênero a milhões de ouvintes, por outro, grupos independentes e underground mantiveram viva a ética do do it yourself. No Brasil, a cena mostrou força e diversidade, conectando-se cada vez mais com circuitos internacionais. A moda, por sua vez, acompanhou o processo de integração cultural, tornando-se menos contestatória e mais incorporada ao cotidiano juvenil. Em síntese, a década de 1990 demonstra como o punk conseguiu expandir suas fronteiras sem perder completamente o vínculo com sua essência crítica e comunitária. Nesse mesmo período, a cena latino-americana também apresentou vitalidade, com bandas argentinas como Fun People e 2 Minutos obtendo destaque regional e reforçando o caráter transnacional do punk nos anos 1990."
       ],
       "images": [
-        { "src": "assets/images/modal/1990/GreenDayBand.jpg", "caption":"Banda Green Day"},
-        { "src": "assets/images/modal/1990/SmashOffspring.jpg", "caption":"Capa do álbum Smash do The Offspring"},
-        { "src": "assets/images/modal/1990/FirstWarpedTour.jpg", "caption":"Pôster do primeiro ano do Warped Tour em 1995"},
-        { "src": "assets/images/modal/1990/DeadFishBand.jpg", "caption":"Banda brasileira Dead Fish"},
-        { "src": "assets/images/modal/1990/StreetwearYoungGirl.jpg", "caption":"Jovem utilizando roupas no estilo streetwear"}
+        {
+          "src": "assets/images/modal/1990/GreenDayBand.jpg",
+          "caption": "Banda Green Day"
+        },
+        {
+          "src": "assets/images/modal/1990/SmashOffspring.jpg",
+          "caption": "Capa do álbum Smash do The Offspring"
+        },
+        {
+          "src": "assets/images/modal/1990/FirstWarpedTour.jpg",
+          "caption": "Pôster do primeiro ano do Warped Tour em 1995"
+        },
+        {
+          "src": "assets/images/modal/1990/DeadFishBand.jpg",
+          "caption": "Banda brasileira Dead Fish"
+        },
+        {
+          "src": "assets/images/modal/1990/StreetwearYoungGirl.jpg",
+          "caption": "Jovem utilizando roupas no estilo streetwear"
+        }
       ],
-      "links": []
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     },
     {
       "id": "2000",
       "year": "2000 - A fragmentação",
       "icon": "assets/images/decades/2000.png",
-      "description":[
+      "description": [
         "A década de 2000 representou um momento de transformação e fragmentação para o punk rock, consolidando sua presença na cultura popular e, ao mesmo tempo, abrindo espaço para novas fusões sonoras e estéticas. Se nos anos 1990 o gênero havia alcançado grande popularidade com o pop punk, os anos 2000 ampliaram esse processo, trazendo uma nova geração de bandas que misturaram o punk com influências do emo, do hardcore melódico e até do metal alternativo. Nesse período, o punk consolidou-se como parte integrante do imaginário juvenil global, encontrando espaço em grandes festivais, mídias de massa e nas então emergentes plataformas digitais.",
         "Nos Estados Unidos, a cena foi dominada por grupos que alcançaram notoriedade internacional, como Sum 41, Good Charlotte e Simple Plan, cujas músicas misturavam o vigor do punk com melodias acessíveis e temáticas ligadas à vida adolescente. O álbum All Killer No Filler (2001), do Sum 41, e Young and the Hopeless (2002), do Good Charlotte, tornaram-se símbolos desse período, conquistando grande espaço na MTV e no circuito internacional. Paralelamente, bandas como My Chemical Romance, embora mais próximas do pós-hardcore e do emo, dialogavam com a estética punk e ajudaram a consolidar a chamada “geração emo” dos anos 2000, que atraiu milhões de jovens e trouxe visibilidade renovada ao universo alternativo.",
         "O circuito de festivais também foi essencial para a difusão do punk nesse período. O Warped Tour consolidou-se como a principal vitrine para o gênero, reunindo bandas consagradas e novos talentos em uma programação que percorria várias cidades da América do Norte. Além disso, a disseminação da internet e de plataformas como o MySpace alterou profundamente a dinâmica de circulação musical, permitindo que bandas independentes alcançassem visibilidade sem depender exclusivamente de gravadoras tradicionais. Esse processo favoreceu a manutenção da ética do do it yourself, agora adaptada ao ambiente digital.",
@@ -86,19 +147,37 @@
         "Em síntese, a década de 2000 demonstrou a capacidade de adaptação do punk rock às novas condições da indústria musical e da cultura digital. A explosão do pop punk, a aproximação com o emo e a difusão pela internet permitiram ao gênero alcançar um público ainda mais amplo, ao mesmo tempo em que garantiram a sobrevivência de sua vertente independente. No Brasil, a cena mostrou vitalidade e diversidade, articulando tradição e inovação. A moda, por sua vez, espelhou as transformações do período, tornando-se parte do cotidiano de milhões de jovens ao redor do mundo."
       ],
       "images": [
-        { "src": "assets/images/modal/2000/GoodCharlotteBand.jpg", "caption":"Banda Good Charlotte"},
-        { "src": "assets/images/modal/2000/AllKillerNoFillerSum41.jpg", "caption":"Capa do álbum All Killer No Filler do Sum  41"},
-        { "src": "assets/images/modal/2000/MyChemicalRomanceBand.jpg", "caption":"Banda My Chemical Romance"},
-        { "src": "assets/images/modal/2000/ColeraBand.jpg", "caption":"Banda brasileira Cólera"},
-        { "src": "assets/images/modal/2000/PopPunkFashion.jpg", "caption":"Mulher utilizando o estilo Pop Punk"}        
+        {
+          "src": "assets/images/modal/2000/GoodCharlotteBand.jpg",
+          "caption": "Banda Good Charlotte"
+        },
+        {
+          "src": "assets/images/modal/2000/AllKillerNoFillerSum41.jpg",
+          "caption": "Capa do álbum All Killer No Filler do Sum  41"
+        },
+        {
+          "src": "assets/images/modal/2000/MyChemicalRomanceBand.jpg",
+          "caption": "Banda My Chemical Romance"
+        },
+        {
+          "src": "assets/images/modal/2000/ColeraBand.jpg",
+          "caption": "Banda brasileira Cólera"
+        },
+        {
+          "src": "assets/images/modal/2000/PopPunkFashion.jpg",
+          "caption": "Mulher utilizando o estilo Pop Punk"
+        }
       ],
-      "links": []
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     },
     {
       "id": "2010",
       "year": "2010 - A renovação",
       "icon": "assets/images/decades/2010.png",
-      "description":[
+      "description": [
         "A década de 2010 foi marcada por um duplo movimento no interior do punk rock: de um lado, a valorização da memória histórica do gênero, com relançamentos, documentários e o fortalecimento do colecionismo em vinil; de outro, a emergência de novas bandas que buscaram revitalizar a estética punk, ora recuperando elementos tradicionais, ora hibridizando o som com outras vertentes contemporâneas, como o indie rock e o pós-hardcore. Essa tensão entre passado e futuro caracterizou o período, evidenciando como o punk, mais de três décadas após sua origem, permanecia vivo e em constante transformação.",
         "No cenário internacional, o revival do pop punk ganhou destaque com o surgimento de bandas como The Story So Far, Neck Deep e State Champs, que resgataram o espírito juvenil dos anos 1990 e atualizaram a sonoridade para novas audiências. Paralelamente, grupos como PUP (Canadá) e Against Me! (EUA) exploraram abordagens mais politizadas e criativas, conquistando reconhecimento crítico e público. Outra tendência importante foi a ascensão de bandas associadas ao chamado pós-punk contemporâneo, como IDLES e Fontaines D.C. , que, embora não se enquadrem de maneira estrita no punk rock, compartilham da mesma energia contestatória e da estética crua que caracteriza o movimento. Essa abertura para fusões demonstrou a capacidade do punk de dialogar com linguagens emergentes sem perder sua essência contestatória.",
         "No Brasil, a década de 2010 foi marcada pela manutenção da cena punk em espaços alternativos e pela atuação de coletivos culturais que mantiveram viva a tradição do do it yourself. Pequenas casas de shows, centros culturais independentes e ocupações urbanas tornaram-se pontos de encontro e resistência, permitindo que novas bandas se articulassem e dialogassem com as gerações anteriores. Bandas veteranas como Ratos de Porão e Inocentes continuaram em atividade, enquanto grupos mais recentes mantiveram a vitalidade do movimento, utilizando as redes sociais, o Bandcamp e o YouTube como principais canais de divulgação. O punk brasileiro nos anos 2010 consolidou-se, assim, como uma cena resiliente, que soube adaptar-se às novas tecnologias sem abrir mão de sua postura crítica frente às desigualdades sociais e políticas.",
@@ -107,20 +186,41 @@
         "Em síntese, a década de 2010 foi um período de renovação e expansão da cena punk rock, marcada tanto pelo resgate de suas tradições quanto pela abertura a novas experimentações. Bandas internacionais revitalizaram o gênero para novas gerações, enquanto no Brasil a cena permaneceu ativa em espaços autônomos e coletivos culturais. A relevância social do punk foi reforçada pelas pautas políticas e identitárias do período, e a moda seguiu como símbolo de contestação, ainda que integrada a novos estilos. A vitalidade demonstrada nesse período atesta a capacidade do punk de se reinventar continuamente, mantendo-se atual e significativo em diferentes contextos históricos."
       ],
       "images": [
-        { "src": "assets/images/modal/2010/TheStorySoFarBand.jpg", "caption":"Banda The Story So Far"},
-        { "src": "assets/images/modal/2010/NeckDeepBand.jpg", "caption":"Banda Neck Deep"},
-        { "src": "assets/images/modal/2010/AgainstMeBand.jpg", "caption":"Banda Against Me!"},
-        { "src": "assets/images/modal/2010/PunkRockGirl.jpg", "caption":"Mulher de cabelo vermelho no estilo Punk Rock"},
-        { "src": "assets/images/modal/2010/IDLESBand.jpg", "caption":"Banda IDLES"},
-        { "src": "assets/images/modal/2010/PUPBand.jpg", "caption":"Banda PUP"}
+        {
+          "src": "assets/images/modal/2010/TheStorySoFarBand.jpg",
+          "caption": "Banda The Story So Far"
+        },
+        {
+          "src": "assets/images/modal/2010/NeckDeepBand.jpg",
+          "caption": "Banda Neck Deep"
+        },
+        {
+          "src": "assets/images/modal/2010/AgainstMeBand.jpg",
+          "caption": "Banda Against Me!"
+        },
+        {
+          "src": "assets/images/modal/2010/PunkRockGirl.jpg",
+          "caption": "Mulher de cabelo vermelho no estilo Punk Rock"
+        },
+        {
+          "src": "assets/images/modal/2010/IDLESBand.jpg",
+          "caption": "Banda IDLES"
+        },
+        {
+          "src": "assets/images/modal/2010/PUPBand.jpg",
+          "caption": "Banda PUP"
+        }
       ],
-      "links": []
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     },
     {
       "id": "atual",
       "year": "Presente - A atualidade",
       "icon": "assets/images/decades/Presente.png",
-      "description":[
+      "description": [
         "O período entre 2020 e 2025 mostra que o punk rock permanece como um movimento cultural ativo, ainda que reformulado em função das transformações sociais, políticas e tecnológicas do século XXI. Longe de ser apenas uma expressão nostálgica, o punk atual se caracteriza pela diversidade estética e pela pluralidade de vozes, combinando tradições herdadas das décadas anteriores com novas linguagens sonoras, visuais e políticas. Esse processo reflete tanto a capacidade do punk de se reinventar quanto a permanência de sua função contestatória em tempos de crise global.",
         "No cenário internacional, uma das principais características do punk contemporâneo é a fusão com outros gêneros musicais. Bandas como IDLES (Reino Unido) e Fontaines D.C. (Irlanda) revitalizaram a estética do pós-punk, trazendo letras engajadas e arranjos intensos que dialogam com o espírito punk. O grupo australiano Amyl and The Sniffers ganhou notoriedade ao recuperar a energia bruta e visceral do punk setentista, enquanto o norte-americano Turnstile redefiniu o hardcore moderno com álbuns como Glow On (2021), que misturam agressividade com sonoridades mais melódicas e acessíveis. Além dessas formações, bandas como Meet Me @ The Altar e Pinkshift simbolizam a renovação geracional e identitária do gênero, ao reunirem mulheres, pessoas negras e integrantes LGBTQIA+, reafirmando o compromisso do punk com a diversidade e a inclusão.",
         "O contexto pandêmico de 2020 também teve impacto direto na cena punk mundial. Com a suspensão de shows presenciais, as bandas recorreram massivamente às plataformas de streaming e às redes sociais para divulgar seus trabalhos, mantendo ativa a relação com os fãs. Lives, lançamentos digitais e o uso do Bandcamp consolidaram uma nova etapa da ética do it yourself, agora mediada pela tecnologia. Ao mesmo tempo, o retorno gradual das atividades presenciais a partir de 2022 trouxe uma valorização renovada dos concertos ao vivo, com festivais independentes e turnês de médio porte sendo retomados com entusiasmo por públicos que ansiavam pelo reencontro coletivo.",
@@ -130,14 +230,35 @@
         "Em síntese, o punk rock entre 2020 e 2025 evidencia a força de um movimento que, mesmo após quase meio século de existência, continua a se reinventar. A diversidade de bandas, a pluralidade de identidades representadas, o uso intensivo das plataformas digitais e a permanência da estética contestatória demonstram que o punk permanece atual e significativo. No Brasil e no mundo, o gênero segue como linguagem de resistência, ao mesmo tempo em que dialoga com novos públicos e contextos culturais, confirmando sua relevância como uma das expressões mais duradouras da música e da contracultura contemporânea."
       ],
       "images": [
-        { "src": "assets/images/modal/Presente/FontainesDCBand.jpg", "caption":"Banda Fontaines D.C."},
-        { "src": "assets/images/modal/Presente/AmylAndTheSniffersBand.jpg", "caption":"Banda Amyl And The Sniffers"},
-        { "src": "assets/images/modal/Presente/TurnstileBand.jpg", "caption":"Banda Turnstile"},
-        { "src": "assets/images/modal/Presente/YoungPunkers.jpg", "caption":"Jovens punkers"},
-        { "src": "assets/images/modal/Presente/MeetMeAtTheAltarBand.jpg", "caption":"Banda Meet Me At The Altar"},
-        { "src": "assets/images/modal/Presente/PinkshiftBand.jpg", "caption":"Banda Pinkshift"}
+        {
+          "src": "assets/images/modal/Presente/FontainesDCBand.jpg",
+          "caption": "Banda Fontaines D.C."
+        },
+        {
+          "src": "assets/images/modal/Presente/AmylAndTheSniffersBand.jpg",
+          "caption": "Banda Amyl And The Sniffers"
+        },
+        {
+          "src": "assets/images/modal/Presente/TurnstileBand.jpg",
+          "caption": "Banda Turnstile"
+        },
+        {
+          "src": "assets/images/modal/Presente/YoungPunkers.jpg",
+          "caption": "Jovens punkers"
+        },
+        {
+          "src": "assets/images/modal/Presente/MeetMeAtTheAltarBand.jpg",
+          "caption": "Banda Meet Me At The Altar"
+        },
+        {
+          "src": "assets/images/modal/Presente/PinkshiftBand.jpg",
+          "caption": "Banda Pinkshift"
+        }
       ],
-      "links": []
+      "playlist": {
+        "url": " ",
+        "image": "assets/images/modal/DiscoAbutris.png"
+      }
     }
   ]
 }

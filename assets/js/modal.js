@@ -86,6 +86,40 @@ function openModal(decade) {
     });
   }
 
+  // Adicionar o disco do Spotify (se existir)
+  const modalRight = document.querySelector(".modal-right");
+  const existingDisc = document.querySelector(".playlist-section");
+  if (existingDisc) existingDisc.remove(); // evita duplicar ao reabrir modal
+
+  if (decade.playlist && decade.playlist.url) {
+    const playlistSection = document.createElement("div");
+    playlistSection.className = "playlist-section";
+
+    // Texto lateral (agora à esquerda do disco)
+    const playlistText = document.createElement("p");
+    playlistText.className = "playlist-text";
+    playlistText.innerHTML = `Acesse nossa playlist personalizada da época ➡`;
+
+    // Disco girando com link
+    const discLink = document.createElement("a");
+    discLink.href = decade.playlist.url;
+    discLink.target = "_blank";
+    discLink.className = "playlist-disc-link";
+
+    const discImg = document.createElement("img");
+    discImg.src = decade.playlist.image || "assets/images/timeline/disco.png";
+    discImg.alt = "Acesse a playlist da década";
+    discImg.className = "playlist-disc";
+
+    discLink.appendChild(discImg);
+
+    playlistSection.appendChild(playlistText);
+    playlistSection.appendChild(discLink);
+    modalRight.appendChild(playlistSection);
+  }
+
+
+
   // Mostra modal com efeito suave
   modal.style.display = "flex";
   setTimeout(() => modal.classList.add("show"), 20);
@@ -97,6 +131,7 @@ function openModal(decade) {
   modal.setAttribute("tabindex", "-1");
   modal.focus();
 }
+
 
 
 // ===============================
@@ -148,4 +183,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-  
