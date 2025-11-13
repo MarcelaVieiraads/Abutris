@@ -185,8 +185,8 @@ function initNavigation() {
     const rect = timeline.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    const halfwayVisible = rect.top < windowHeight / 2 && rect.bottom > windowHeight / 2;
-    controls.style.display = halfwayVisible ? "flex" : "none";
+    const fullVisible = rect.top >= 0 && rect.bottom <= windowHeight;
+    controls.style.display = fullVisible ? "flex" : "none";
   }
 
   window.addEventListener("scroll", checkVisibility);
