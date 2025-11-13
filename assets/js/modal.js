@@ -1,7 +1,7 @@
 // ===============================
 // Carrega wikiLinks do JSON
 // ===============================
-let wikiLinks = {}; // será preenchido pelo JSON
+let wikiLinks = {};
 
 fetch("data/wikiLinks.json")
   .then(res => res.json())
@@ -10,6 +10,7 @@ fetch("data/wikiLinks.json")
     console.log("wikiLinks carregado:", wikiLinks);
   })
   .catch(err => console.error("Erro ao carregar wikiLinks:", err));
+
 
 // ===============================
 // Converte palavras-chave em links
@@ -26,8 +27,9 @@ function linkifyText(text, links) {
   return result;
 }
 
+
 // ===============================
-// Abrir modal
+// Abrir modal (com animação suave)
 // ===============================
 function openModal(decade) {
   const modal = document.getElementById("timelineModal");
@@ -36,11 +38,11 @@ function openModal(decade) {
   // Esconde o navbar
   if (navbar) navbar.style.display = "none";
 
-  // Preencher ano e título
+  // Preenche ano e título
   document.getElementById("modalYear").textContent = decade.year;
   document.getElementById("modalTitle").textContent = decade.title;
 
-  // Preencher descrições (com wikilinks)
+  // Preenche descrições (com wikilinks)
   const descContainer = document.getElementById("modalDescription");
   descContainer.innerHTML = "";
   if (Array.isArray(decade.description)) {
@@ -53,7 +55,7 @@ function openModal(decade) {
     descContainer.innerHTML = linkifyText(decade.description || "", wikiLinks);
   }
 
-  // Preencher imagens (com legendas opcionais)
+  // Preenche imagens (com legendas opcionais)
   const leftContainer = document.getElementById("modalImages");
   leftContainer.innerHTML = "";
   if (Array.isArray(decade.images)) {
@@ -84,30 +86,36 @@ function openModal(decade) {
     });
   }
 
-  // Exibe o modal
+  // Mostra modal com efeito suave
   modal.style.display = "flex";
+  setTimeout(() => modal.classList.add("show"), 20);
 
-  // Travar scroll do body
+  // Bloqueia o scroll da página
   document.body.style.overflow = "hidden";
 
-  // Permitir foco e rolagem dentro do modal
+  // Foco e navegação com teclado
   modal.setAttribute("tabindex", "-1");
   modal.focus();
 }
 
+
 // ===============================
-// Fechar modal
+// Fechar modal (com fade suave)
 // ===============================
 function closeModal() {
   const modal = document.getElementById("timelineModal");
   const navbar = document.querySelector(".navbar");
 
-  modal.style.display = "none";
+  modal.classList.remove("show");
 
-  // Reexibe navbar e libera scroll
-  if (navbar) navbar.style.display = "flex";
-  document.body.style.overflow = "";
+  // Espera o fade terminar antes de esconder
+  setTimeout(() => {
+    modal.style.display = "none";
+    if (navbar) navbar.style.display = "flex";
+    document.body.style.overflow = "";
+  }, 350); // mesmo tempo do CSS (0.4s)
 }
+
 
 // ===============================
 // Eventos de interação
@@ -117,19 +125,27 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
   const modal = document.getElementById("timelineModal");
+
   if (modal) {
-    // ⚙️ NÃO fecha mais ao clicar fora
-    // ✅ Corrigido: mantém scroll dentro do modal com teclado
+    // 🔹 Mantém o modal aberto ao clicar fora
+    modal.addEventListener("click", (e) => {
+      if (e.target.classList.contains("modal-content")) return;
+    });
+
+    // 🔹 Scroll suave com setas ↑ ↓
     modal.addEventListener("keydown", (e) => {
       const scrollable = modal.querySelector(".modal-content");
+      const scrollSpeed = 200; // ajuste aqui a velocidade
+      if (!scrollable) return;
 
       if (e.key === "ArrowDown") {
         e.preventDefault();
-        scrollable.scrollBy({ top: 150, behavior: "smooth" });
+        scrollable.scrollBy({ top: scrollSpeed, behavior: "smooth" });
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
-        scrollable.scrollBy({ top: -150, behavior: "smooth" });
+        scrollable.scrollBy({ top: -scrollSpeed, behavior: "smooth" });
       }
     });
   }
 });
+  

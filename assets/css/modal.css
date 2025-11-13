@@ -1,6 +1,5 @@
 /* ===== Modal ===== */
 .modal {
-  display: none;
   position: fixed;
   z-index: 200;
   left: 0;
@@ -11,8 +10,21 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+
+  /* 🔥 novo comportamento de transição */
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  transition: opacity 0.35s ease;
 }
 
+/* Quando o modal está ativo */
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== Conteúdo do Modal ===== */
 .modal-content {
   background: url('../images/home/bg-paper.jpg') center/cover no-repeat;
   border: 2px solid var(--accent);
@@ -20,31 +32,35 @@
   max-width: 1100px;
   width: 95%;
   max-height: 90vh;
-  /* altura máxima da tela */
   overflow-y: auto;
-  /* rolagem vertical */
   display: flex;
   flex-direction: column;
   position: relative;
-  animation: fadeIn 0.3s ease;
   padding-bottom: 1rem;
-  /* espaço extra no final */
+
+  /* ✨ suavidade de entrada */
+  transform: scale(0.96);
+  transition: transform 0.35s ease;
 }
 
-/* Personalizar a scrollbar dentro do modal */
+/* Zoom suave quando o modal aparece */
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+/* Scrollbar dentro do modal */
 .modal-content::-webkit-scrollbar {
   width: 8px;
 }
-
 .modal-content::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 4px;
 }
-
 .modal-content::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* ===== Botão de Fechar ===== */
 .modal-close {
   position: absolute;
   top: 12px;
@@ -52,17 +68,17 @@
   background: none;
   border: none;
   cursor: pointer;
+  transition: transform 0.25s ease;
 }
-
 .modal-close img {
   width: 60px;
   height: auto;
 }
-
 .modal-close:hover {
   transform: scale(1.08) rotate(-5deg);
 }
 
+/* ===== Corpo do Modal ===== */
 .modal-body {
   display: flex;
   flex-direction: row;
@@ -70,68 +86,58 @@
   padding: 2rem;
 }
 
-/* Lado esquerdo (imagens) */
+/* ===== Lado Esquerdo (imagens) ===== */
 .modal-left {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   flex: 0 0 260px;
-  /* largura fixa do painel esquerdo */
 }
-
 .modal-left img {
   max-width: 100%;
   border-radius: 6px;
   border: 2px solid var(--accent);
 }
 
-.modal-desc p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Lado direito (textos) */
+/* ===== Lado Direito (textos) ===== */
 .modal-right {
   flex: 1;
   color: var(--white);
   font-family: 'Roboto', sans-serif;
 }
-
-/* Estilo especial pro ano e título */
 .modal-year,
 .modal-title {
   font-family: 'Special Elite', monospace;
   color: var(--accent);
   margin: 0 0 0.5rem;
 }
-
 .modal-year {
   font-size: 2rem;
 }
-
 .modal-title {
   font-size: 1.5rem;
 }
-
-.modal-desc {
+.modal-desc p {
+  margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--bg);
 }
 
+/* ===== Wiki links ===== */
 .wiki-link {
   color: var(--accent);
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
 }
-
 .wiki-link:hover {
   color: #fff;
   background: var(--accent);
 }
 
+/* ===== Imagens com legenda ===== */
 .modal-img-wrapper {
   position: relative;
   display: inline-block;
@@ -141,14 +147,12 @@
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
-
 .modal-img-wrapper img {
   width: 100%;
   height: auto;
   display: block;
   transition: filter 0.4s ease, transform 0.4s ease;
 }
-
 .modal-img-caption {
   position: absolute;
   inset: 0;
@@ -159,7 +163,6 @@
   color: var(--white);
   font-size: 1rem;
   font-family: 'Special Elite', monospace;
-  /* dá o ar typewriter */
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
@@ -167,40 +170,33 @@
   transform: scale(0.95);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
-
-/* efeito hover */
 .modal-img-wrapper:hover img {
   filter: brightness(55%) contrast(120%) grayscale(20%);
   transform: scale(1.05);
 }
-
 .modal-img-wrapper:hover .modal-img-caption {
   opacity: 1;
   transform: scale(1);
 }
 
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsivo */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
   .modal-body {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
   }
 
-  .modal-left img {
-    max-width: 100%;
+  .modal-left {
+    flex: none;
+    order: 2;
+  }
+
+  .modal-right {
+    order: 1;
+  }
+
+  .modal-close img {
+    width: 40px;
   }
 }
