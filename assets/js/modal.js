@@ -1,6 +1,8 @@
+// ===============================
+// Carrega wikiLinks do JSON
+// ===============================
 let wikiLinks = {}; // será preenchido pelo JSON
 
-// Carregar links do wikiLinks.json
 fetch("data/wikiLinks.json")
   .then(res => res.json())
   .then(data => {
@@ -9,7 +11,9 @@ fetch("data/wikiLinks.json")
   })
   .catch(err => console.error("Erro ao carregar wikiLinks:", err));
 
-// Função para linkificar texto
+// ===============================
+// Converte palavras-chave em links
+// ===============================
 function linkifyText(text, links) {
   let result = text;
   for (const [word, url] of Object.entries(links)) {
@@ -22,15 +26,21 @@ function linkifyText(text, links) {
   return result;
 }
 
+// ===============================
 // Abrir modal
+// ===============================
 function openModal(decade) {
   const modal = document.getElementById("timelineModal");
+  const navbar = document.querySelector(".navbar");
 
-  // Ano e título
+  // Esconde o navbar
+  if (navbar) navbar.style.display = "none";
+
+  // Preencher ano e título
   document.getElementById("modalYear").textContent = decade.year;
   document.getElementById("modalTitle").textContent = decade.title;
 
-  // Descrição
+  // Preencher descrições (com wikilinks)
   const descContainer = document.getElementById("modalDescription");
   descContainer.innerHTML = "";
   if (Array.isArray(decade.description)) {
@@ -43,12 +53,11 @@ function openModal(decade) {
     descContainer.innerHTML = linkifyText(decade.description || "", wikiLinks);
   }
 
-  // Imagens
+  // Preencher imagens (com legendas opcionais)
   const leftContainer = document.getElementById("modalImages");
   leftContainer.innerHTML = "";
   if (Array.isArray(decade.images)) {
     decade.images.forEach(imgData => {
-      // Aceita tanto string quanto objeto {src, caption}
       let src, caption;
       if (typeof imgData === "string") {
         src = imgData;
@@ -58,7 +67,6 @@ function openModal(decade) {
         caption = imgData.caption || "";
       }
 
-      // Wrapper
       const wrapper = document.createElement("div");
       wrapper.className = "modal-img-wrapper";
 
@@ -76,23 +84,51 @@ function openModal(decade) {
     });
   }
 
+  // Exibe o modal
   modal.style.display = "flex";
+
+  // Travar scroll do body
+  document.body.style.overflow = "hidden";
+
+  // Permitir foco e rolagem dentro do modal
+  modal.setAttribute("tabindex", "-1");
+  modal.focus();
 }
 
+// ===============================
 // Fechar modal
+// ===============================
 function closeModal() {
-  document.getElementById("timelineModal").style.display = "none";
+  const modal = document.getElementById("timelineModal");
+  const navbar = document.querySelector(".navbar");
+
+  modal.style.display = "none";
+
+  // Reexibe navbar e libera scroll
+  if (navbar) navbar.style.display = "flex";
+  document.body.style.overflow = "";
 }
 
+// ===============================
+// Eventos de interação
+// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".modal-close");
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
   const modal = document.getElementById("timelineModal");
   if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target.id === "timelineModal") {
-        closeModal();
+    // ⚙️ NÃO fecha mais ao clicar fora
+    // ✅ Corrigido: mantém scroll dentro do modal com teclado
+    modal.addEventListener("keydown", (e) => {
+      const scrollable = modal.querySelector(".modal-content");
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        scrollable.scrollBy({ top: 150, behavior: "smooth" });
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        scrollable.scrollBy({ top: -150, behavior: "smooth" });
       }
     });
   }
