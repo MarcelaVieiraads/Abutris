@@ -1,3 +1,10 @@
+function speakText(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "pt-BR";
+  speechSynthesis.cancel(); // evita sobreposição
+  speechSynthesis.speak(utterance);
+}
+
 // ===============================
 // Carrega wikiLinks do JSON
 // ===============================
@@ -118,6 +125,14 @@ function openModal(decade) {
     modalRight.appendChild(playlistSection);
   }
 
+  // Botão de leitura do modal
+  const readBtn = document.getElementById("readModal");
+  readBtn.onclick = () => {
+    const text = document.getElementById("modalDescription").innerText;
+    speakText(text);
+  };
+
+
   // Mostra modal com efeito suave
   modal.style.display = "flex";
   setTimeout(() => modal.classList.add("show"), 20);
@@ -135,6 +150,7 @@ function openModal(decade) {
 // Fechar modal (com fade suave)
 // ===============================
 function closeModal() {
+  speechSynthesis.cancel();
   const modal = document.getElementById("timelineModal");
   const navbar = document.querySelector(".navbar");
 

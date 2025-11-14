@@ -244,3 +244,25 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.tts-btn {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 10px 16px;
+  margin: 10px 0 15px;
+  border-radius: 6px;
+  font-family: 'Special Elite', sans-serif;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.tts-btn:hover {
+  background: #b71c1c;
+  transform: scale(1.05);
+  color: var(--bg);
+  
+}
+
