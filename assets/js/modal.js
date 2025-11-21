@@ -1,57 +1,151 @@
-function speakText(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "pt-BR";
-  speechSynthesis.cancel(); // evita sobreposição
-  speechSynthesis.speak(utterance);
+// ======================================================
+// SISTEMA DE LEITURA EM VOZ ALTA (TTS ACESSÍVEL)
+// ======================================================
+
+// Estado global
+let currentUtterance = null;
+let selectedVoice = null;
+let voiceActive = false;
+
+// Carrega UMA única voz (pt-BR)
+function loadVoice() {
+  const voices = speechSynthesis.getVoices();
+
+  selectedVoice =
+    voices.find(v => v.lang === "pt-BR") ||
+    voices.find(v => v.lang.startsWith("pt")) ||
+    voices[0];
+
+  console.log("Voz selecionada:", selectedVoice?.name);
 }
 
-// ===============================
-// Carrega wikiLinks do JSON
-// ===============================
+window.speechSynthesis.onvoiceschanged = loadVoice;
+
+
+// Ler texto
+function speakText(text) {
+  speechSynthesis.cancel();
+
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  currentUtterance.lang = "pt-BR";
+
+  if (selectedVoice) currentUtterance.voice = selectedVoice;
+
+  speechSynthesis.speak(currentUtterance);
+}
+
+// Pausar
+function pauseSpeech() {
+  if (!speechSynthesis.paused) speechSynthesis.pause();
+}
+
+// Continuar
+function resumeSpeech() {
+  if (speechSynthesis.paused) speechSynthesis.resume();
+}
+
+// Ler texto selecionado
+function speakSelection() {
+  const selected = window.getSelection().toString().trim();
+  if (selected) speakText(selected);
+}
+
+
+// ======================================================
+// LEITOR DE VOZ — BOTÃO E PAINEL EXTERNOS (LATERAL)
+// ======================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const btnToggle = document.getElementById("voiceToggleBtn");
+  const panel = document.getElementById("voicePanel");
+
+  const btnRead = document.getElementById("vp-read");
+  const btnPause = document.getElementById("vp-pause");
+  const btnResume = document.getElementById("vp-resume");
+  const btnStop = document.getElementById("vp-stop");
+
+  // Inicialmente: ocultar tudo
+  btnToggle.style.display = "none";
+  panel.classList.add("hidden");
+
+  // Ativar leitor → exibe painel
+  btnToggle.addEventListener("click", () => {
+    if (!voiceActive) {
+      voiceActive = true;
+      panel.classList.remove("hidden");
+      btnToggle.textContent = "🗣 LEITOR ATIVADO";
+
+      // 🔊 Ler automaticamente TODO o texto do modal
+      const fullText = document.getElementById("modalDescription")?.innerText || "";
+      if (fullText.trim().length > 0) {
+        speakText(fullText);
+      }
+    }
+  });
+
+
+  btnRead.addEventListener("click", speakSelection);
+  btnPause.addEventListener("click", pauseSpeech);
+  btnResume.addEventListener("click", resumeSpeech);
+
+  // Botão parar leitura
+  btnStop.addEventListener("click", () => {
+    speechSynthesis.cancel();
+    voiceActive = false;
+
+    panel.classList.add("hidden");
+    btnToggle.textContent = "🗣 ATIVAR LEITOR DE VOZ";
+  });
+});
+
+
+
+// ======================================================
+// Carrega wikiLinks
+// ======================================================
 let wikiLinks = {};
 
 fetch("data/wikiLinks.json")
   .then(res => res.json())
-  .then(data => {
-    wikiLinks = data;
-    console.log("wikiLinks carregado:", wikiLinks);
-  })
+  .then(data => (wikiLinks = data))
   .catch(err => console.error("Erro ao carregar wikiLinks:", err));
 
 
-// ===============================
+// ======================================================
 // Converte palavras-chave em links
-// ===============================
+// ======================================================
 function linkifyText(text, links) {
   let result = text;
   for (const [word, url] of Object.entries(links)) {
     const regex = new RegExp(`(${word})(?=[\\s,.!?;:])`, "gi");
-    result = result.replace(
-      regex,
-      `<a href="${url}" target="_blank" class="wiki-link">${word}</a>`
-    );
+    result = result.replace(regex, `<a href="${url}" target="_blank" class="wiki-link">${word}</a>`);
   }
   return result;
 }
 
 
-// ===============================
-// Abrir modal (com animação suave)
-// ===============================
+// ======================================================
+// Abrir modal
+// ======================================================
 function openModal(decade) {
   const modal = document.getElementById("timelineModal");
   const navbar = document.querySelector(".navbar");
+  const btnToggle = document.getElementById("voiceToggleBtn");
 
-  // Esconde o navbar
   if (navbar) navbar.style.display = "none";
 
-  // Preenche ano e título
+  // Mostrar o botão do leitor SOMENTE quando o modal abrir
+  btnToggle.style.display = "block";
+
+
+  // Preencher título e texto
   document.getElementById("modalYear").textContent = decade.year;
   document.getElementById("modalTitle").textContent = decade.title;
 
-  // Preenche descrições (com wikilinks)
   const descContainer = document.getElementById("modalDescription");
   descContainer.innerHTML = "";
+
   if (Array.isArray(decade.description)) {
     decade.description.forEach(paragraph => {
       const p = document.createElement("p");
@@ -62,12 +156,15 @@ function openModal(decade) {
     descContainer.innerHTML = linkifyText(decade.description || "", wikiLinks);
   }
 
-  // Preenche imagens (com legendas opcionais)
+
+  // Monta imagens
   const leftContainer = document.getElementById("modalImages");
   leftContainer.innerHTML = "";
+
   if (Array.isArray(decade.images)) {
     decade.images.forEach(imgData => {
       let src, caption;
+
       if (typeof imgData === "string") {
         src = imgData;
         caption = "";
@@ -93,94 +190,80 @@ function openModal(decade) {
     });
   }
 
-  // Adicionar o disco do Spotify (se existir)
+
+  // Playlist (disco girando)
   const modalRight = document.querySelector(".modal-right");
   const existingDisc = document.querySelector(".playlist-section");
-  if (existingDisc) existingDisc.remove(); // evita duplicar ao reabrir modal
+  if (existingDisc) existingDisc.remove();
 
   if (decade.playlist && decade.playlist.url) {
     const playlistSection = document.createElement("div");
     playlistSection.className = "playlist-section";
 
-    // Texto lateral (agora à esquerda do disco)
-    const playlistText = document.createElement("p");
-    playlistText.className = "playlist-text";
-    playlistText.innerHTML = `Acesse nossa playlist personalizada da época ➡`;
+    playlistSection.innerHTML = `
+      <p class="playlist-text">Acesse nossa playlist personalizada da época ➡</p>
+      <a href="${decade.playlist.url}" target="_blank" class="playlist-disc-link">
+          <img src="${decade.playlist.image || 'assets/images/timeline/disco.png'}" 
+               class="playlist-disc" alt="Playlist da década">
+      </a>
+    `;
 
-    // Disco girando com link
-    const discLink = document.createElement("a");
-    discLink.href = decade.playlist.url;
-    discLink.target = "_blank";
-    discLink.className = "playlist-disc-link";
-
-    const discImg = document.createElement("img");
-    discImg.src = decade.playlist.image || "assets/images/timeline/disco.png";
-    discImg.alt = "Acesse a playlist da década";
-    discImg.className = "playlist-disc";
-
-    discLink.appendChild(discImg);
-
-    playlistSection.appendChild(playlistText);
-    playlistSection.appendChild(discLink);
     modalRight.appendChild(playlistSection);
   }
 
-  // Botão de leitura do modal
-  const readBtn = document.getElementById("readModal");
-  readBtn.onclick = () => {
-    const text = document.getElementById("modalDescription").innerText;
-    speakText(text);
-  };
 
-
-  // Mostra modal com efeito suave
+  // Aparece modal
   modal.style.display = "flex";
   setTimeout(() => modal.classList.add("show"), 20);
 
-  // Bloqueia o scroll da página
   document.body.style.overflow = "hidden";
 
-  // Foco e navegação com teclado
   modal.setAttribute("tabindex", "-1");
   modal.focus();
 }
 
 
-// ===============================
-// Fechar modal (com fade suave)
-// ===============================
+
+// ======================================================
+// Fechar modal
+// ======================================================
 function closeModal() {
+  const btnToggle = document.getElementById("voiceToggleBtn");
+  const panel = document.getElementById("voicePanel");
+
+  // Parar e desligar tudo do leitor ao fechar modal
   speechSynthesis.cancel();
+  voiceActive = false;
+
+  panel.classList.add("hidden");
+  btnToggle.style.display = "none";
+  btnToggle.textContent = "🗣 ATIVAR LEITOR DE VOZ";
+
   const modal = document.getElementById("timelineModal");
   const navbar = document.querySelector(".navbar");
 
   modal.classList.remove("show");
 
-  // Espera o fade terminar antes de esconder
   setTimeout(() => {
     modal.style.display = "none";
     if (navbar) navbar.style.display = "flex";
     document.body.style.overflow = "";
-  }, 350); // mesmo tempo do CSS (0.4s)
+  }, 350);
 }
 
 
-// ===============================
-// Eventos de interação
-// ===============================
+
+// ======================================================
+// Navegação dentro do modal
+// ======================================================
 document.addEventListener("DOMContentLoaded", () => {
+
   const closeBtn = document.querySelector(".modal-close");
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
   const modal = document.getElementById("timelineModal");
 
   if (modal) {
-    // 🔹 Mantém o modal aberto ao clicar fora
-    modal.addEventListener("click", (e) => {
-      if (e.target.classList.contains("modal-content")) return;
-    });
-
-    // 🔹 Scroll suave e bloqueio de setas horizontais
     modal.addEventListener("keydown", (e) => {
       const scrollable = modal.querySelector(".modal-content");
       const scrollSpeed = 200;
@@ -199,7 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         case "ArrowLeft":
         case "ArrowRight":
-          // bloqueia a timeline de se mover
           e.preventDefault();
           e.stopPropagation();
           break;

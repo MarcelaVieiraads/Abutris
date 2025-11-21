@@ -97,13 +97,24 @@
         <div class="modal-right">
           <h2 id="modalYear" class="modal-year"></h2>
           <h3 id="modalTitle" class="modal-title"></h3>
-          <button id="readModal" class="tts-btn">Ouvir este conteúdo</button>
           <div id="modalDescription" class="modal-desc"></div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Botão principal do leitor -->
+  <button id="voiceToggleBtn" class="voice-toggle hidden">
+    🗣 ATIVAR LEITOR DE VOZ
+  </button>
+
+  <!-- Painel lateral -->
+  <div id="voicePanel" class="voice-panel hidden">
+    <button id="vp-read">🔊 LER SELEÇÃO</button>
+    <button id="vp-pause">⏸ PAUSAR</button>
+    <button id="vp-resume">▶ RETOMAR</button>
+    <button id="vp-stop">⛔ PARAR/SAIR</button>
+  </div>
 
 
   <!-- JS -->
@@ -111,5 +122,4 @@
   <script src="assets/js/timeline.js" defer></script>
   <script src="assets/js/modal.js" defer></script>
 </body>
-
 </html>

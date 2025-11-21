@@ -262,7 +262,82 @@
 .tts-btn:hover {
   background: #b71c1c;
   transform: scale(1.05);
-  color: var(--bg);
+  color: var(--bg); 
   
 }
 
+.accessibility-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.accessibility-controls button,
+.accessibility-controls select {
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #222;
+  color: white;
+}
+
+/* Botão principal */
+.voice-toggle {
+    position: fixed;
+    top: 20%;
+    right: 3px;
+    background: #d00;
+    color: white;
+    border: none;
+    padding: 12px 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 99999;
+    transition: .3s ease;
+}
+
+.voice-toggle.hidden {
+    display: none;
+}
+
+/* Painel lateral */
+.voice-panel {
+    position: fixed;
+    top: 30%;
+    right: 20px;
+    width: 170px;
+    padding: 12px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 99999;
+    transition: opacity .3s ease;
+}
+
+.voice-panel.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.voice-panel button {
+    background: #444; 
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.voice-panel button:hover {
+    background: #d00;
+}
